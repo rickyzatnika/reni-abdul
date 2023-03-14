@@ -23,18 +23,6 @@ body {
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "TimesNewRomance";
-  src: url("../assets/fonts/Times-New-Romance.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "timesi";
-  src: url("../assets/fonts/timesi.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
 
 /* ---------------------------------------------- /*
  * Mouse animate icon
