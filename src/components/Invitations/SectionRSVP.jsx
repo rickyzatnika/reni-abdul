@@ -19,7 +19,7 @@ const SectionRSVP = ({ guest }) => {
     try {
       const userId = guest.userId;
       await axios.patch(
-        `${process.env.REACT_APP_API_URI}/invitation/status/${uuid}?userId=${userId}`,
+        `${process.env.REACT_APP_URI}/invitation/status/${uuid}?userId=${userId}`,
         {
           present: present,
           status: selectedValue,
@@ -51,7 +51,7 @@ const SectionRSVP = ({ guest }) => {
     const fetchQRCode = async () => {
       try {
         const { data } = await axios.get(
-          `${process.env.REACT_APP_API_URI}/invitation/validate/${guest?.unique_Code}`
+          `${process.env.REACT_APP_URI}/invitation/validate/${guest?.unique_Code}`
         );
 
         setQrCode(data.qrCode);

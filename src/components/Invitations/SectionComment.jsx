@@ -15,7 +15,7 @@ const SectionComment = ({ guest }) => {
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
   const { data: posts, error } = useSWR(
-    `${process.env.REACT_APP_API_URI}/comment/${guest?.unique_Code}?userId=${userId}`,
+    `${process.env.REACT_APP_URI}/comment/${guest?.unique_Code}?userId=${userId}`,
     fetcher
   );
   useEffect(() => {}, [posts, error]);
@@ -30,7 +30,7 @@ const SectionComment = ({ guest }) => {
       setLoading(false);
       await axios
         .patch(
-          `${process.env.REACT_APP_API_UR}/invitation/comment/${guest?.unique_Code}`,
+          `${process.env.REACT_APP_URI}/invitation/comment/${guest?.unique_Code}`,
           {
             comments: comments,
             date: moment().format("DD MMMM YYYY, h:mm a"),

@@ -20,7 +20,7 @@ const Invitation = () => {
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
   const { data: guest, error } = useSWR(
-    `${process.env.REACT_APP_API_URI}/invitation/${uuid}`,
+    `${process.env.REACT_APP_URI}/invitation/${uuid}`,
     fetcher
   );
   useEffect(() => { }, [guest, error]);

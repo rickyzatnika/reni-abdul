@@ -16,7 +16,7 @@ const GetId = () => {
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
   const { data: guest, error } = useSWR(
-    `${process.env.REACT_APP_API_URI}/invitation/${uuid}`,
+    `${process.env.REACT_APP_URI}/invitation/${uuid}`,
     fetcher
   );
 
@@ -26,7 +26,7 @@ const GetId = () => {
     try {
       const userId = guest?.userId;
       await axios.patch(
-        `${process.env.REACT_APP_API_URI}/invitation/status/${uuid}?userId=${userId}`,
+        `${process.env.REACT_APP_URI}/invitation/status/${uuid}?userId=${userId}`,
         {
           status: selectValue,
         }
