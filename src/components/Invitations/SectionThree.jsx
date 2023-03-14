@@ -8,15 +8,15 @@ const SectionThree = () => {
       <div className="absolute top-0 left-0 right-0 -z-50">
         <img src="/wood.jpg" alt="" className="w-full h-[520px] lg:h-[420px]" />
       </div>
-      <div className="absolute -top-1 -left-4 -z-40">
+      <div className="absolute -top-1 -left-2 -z-40">
         <img
           src="/images/orn-1-top-right.png"
           alt=""
-          className="w-[150px] lg:w-[250px] object-cover object-center"
+          className="w-[130px] lg:w-[250px] object-cover object-center"
         />
       </div>
-      <div className="text-center text-3xl mix-blend-overlay lg:text-5xl p-1 text-transparent bg-black/60 font-bold bg-clip-text">
-        <h3 className="font-[parisienne]">Save The Date</h3>
+      <div className="text-center text-3xl mix-blend-overlay lg:text-5xl p-1 text-transparent  bg-black/70  bg-clip-text">
+        <h3 className="font-[parisienne] font-semibold">Save The Date</h3>
       </div>
       <CountDownTimer />
       <AddToCalendarButton

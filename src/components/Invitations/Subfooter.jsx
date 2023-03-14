@@ -18,13 +18,13 @@ const Subfooter = () => {
         />
       </div>
       <div className="text-center w-4/6 lg:w-3/6 mx-auto space-y-3">
-        <i className="text-sm lg:text-lg text-zinc-500">
+        <i className="text-md lg:text-lg text-zinc-500">
           "Dan nikahkanlah orang-orang yang masih membujang di antara kamu, dan
           juga orang-orang yang layak (menikah) dari hamba-hamba sahayamu yang
           laki-laki dan perempuan. Jika mereka miskin, Allah akan memberi
           kemampuan kepada mereka dengan karunia-Nya."
         </i>
-        <p className="text-sm lg:text-lg text-zinc-700">QS. An-Nur Ayat 32</p>
+        <p className="text-md lg:text-lg text-zinc-700">QS. An-Nur Ayat 32</p>
       </div>
       <div className="space-y-3 text-center">
         <h3 className="text-4xl lg:text-5xl text-emerald-700 ">Reni & Abdul</h3>
