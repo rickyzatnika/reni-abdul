@@ -73,7 +73,7 @@ const GetId = () => {
               <span className="text-4xl lg:text-6xl text-teal-800">&</span>
               <h4 className="text-5xl lg:text-6xl text-teal-800 ">Abdul</h4>
             </div>
-            <p className="text-zinc-600 text-md lg:text-lg w-full lg:w-5/6 text-center p-1 lg:p-2 rounded-md">
+            <p className="text-zinc-600 text-md lg:text-lg w-full lg:w-5/6 text-center p-1 lg:p-2 px-3 rounded-md">
               Hi {guest?.name}, silahkan Buka Undangan untuk melihat detail
               acara. Jangan lupa mengisi form kehadiran dan Screenshot Qr-Code
               nya ya 😉.
