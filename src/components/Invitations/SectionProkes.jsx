@@ -25,7 +25,7 @@ const SectionProkes = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full mt-20">
       <div className="mx-auto bg-zinc-100 shadow-xl shadow-zinc-400/30 w-full lg:w-4/6 h-full flex flex-col items-center justify-between">
         <div className="text-md lg:text-lg w-full shadow-lg py-3 text-zinc-100 bg-orange-600/80 text-center ">
           <h1>MOHON UNTUK TETAP MEMATUHI</h1>
