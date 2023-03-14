@@ -18,7 +18,7 @@ const SectionGallery = () => {
           Happy Moment
         </h1>
       </div>
-      <div className="gallery columns-2 lg:columns-3 w-full lg:max-w-5xl mx-auto gap-0">
+      <div className="gallery columns-3 lg:columns-3 w-full max-w-4xl mx-auto gap-0">
         <a href="/gallery/gallery-1.jpg">
           <img
             src="/gallery/gallery-1.jpg"
