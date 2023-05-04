@@ -21,24 +21,35 @@ const SectionOne = () => {
           />
         </div>
         <div className="w-full relative z-50 text-center py-14">
-          <h3 className=" font-[parisienne] text-4xl text-emerald-800 lg:text-6xl">
-            Mempelai
-          </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-12 items-center pt-20 lg:pt-32 gap-20 lg:gap-0 px-10">
-            <div className="col-span-1 lg:col-span-4">
-              <div className="flex flex-col">
+          <div className="w-full flex flex-col items-center justify-center">
+            <img
+              src="/images/bismillah.png"
+              alt=""
+              className="w-5/6 sm:w-2/6 object-contain"
+            />
+            <p className="text-zinc-800 text-md">
+              Assalamu'alaikum Warahmatullahi Wabarakatuh <br />
+              Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud
+              menyelenggarakan resepsi pernikahan putra-putri kami
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 items-center pt-20 lg:pt-32 gap-10 lg:gap-0 px-10">
+            <div className="col-span-1 lg:col-span-4 ">
+              <div className="w-full flex flex-col items-center justify-center">
                 <img
-                  src="/images/womans.png"
+                  src="/images/mann.png"
                   alt=""
-                  className=" w-full lg:w-[250px] mx-auto object-cover"
+                  className=" w-5/6 lg:w-[250px] mx-auto object-cover"
                 />
                 <div className="w-full flex flex-col items-center gap-2 pt-2">
-                  <h3 className="font-[parisienne] text-3xl font-medium lg:font-semibold text-emerald-900">
-                    Reni Anggraeni
+                  <h3 className=" font-[parisienne] text-3xl font-medium lg:font-semibold text-emerald-900">
+                    Muhammad Abdul Dhani
                   </h3>
-                  <p className="text-zinc-700">
-                    Putra dari Bapak Dedi Kurniawan dan Ibu Dian Anggraeni
-                  </p>
+                  <div className="text-zinc-700 leading-relaxed">
+                    <p className="font-semibold">Putra Ke 1 dari :</p>
+                    <p>Bapak H. Asep Solihin</p> <span>&</span>{" "}
+                    <p>Ibu Hj. Nur Hayati</p>
+                  </div>
                   <Link to="https://instagram.com">
                     <IoLogoInstagram size={28} className="text-pink-800" />
                   </Link>
@@ -48,20 +59,23 @@ const SectionOne = () => {
             <div className="col-span-1 lg:col-span-4 text-emerald-900/90 font-[parisienne] text-7xl">
               &
             </div>
-            <div className="col-span-1 lg:col-span-4 ">
-              <div className="w-full flex flex-col items-center justify-center">
+            <div className="col-span-1 lg:col-span-4">
+              <div className="flex flex-col">
                 <img
-                  src="/images/mans.png"
+                  src="/images/girls.png"
                   alt=""
-                  className=" w-full lg:w-[250px] mx-auto object-cover"
+                  className=" w-5/6 lg:w-[250px] mx-auto object-cover"
                 />
                 <div className="w-full flex flex-col items-center gap-2 pt-2">
-                  <h3 className=" font-[parisienne] text-3xl font-medium lg:font-semibold text-emerald-900">
-                    Muhammad Abdul Dhani
+                  <h3 className="font-[parisienne] text-3xl font-medium lg:font-semibold text-emerald-900">
+                    Reni Anggraeni
                   </h3>
-                  <p className="text-zinc-700">
-                    Putra dari Bapak H. Asep Solihin dan Ibu Hj. Nur Hayati
-                  </p>
+                  <div className="text-zinc-700 leading-relaxed">
+                    <p className="font-semibold">Putra Ke 3 dari :</p>
+                    <p>Bapak Dedi Kurniawan</p> <span>&</span>{" "}
+                    <p>Ibu Dian Anggraeni</p>
+                  </div>
+
                   <Link to="https://instagram.com">
                     <IoLogoInstagram size={28} className="text-pink-800" />
                   </Link>

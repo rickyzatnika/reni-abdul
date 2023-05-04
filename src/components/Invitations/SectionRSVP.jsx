@@ -84,10 +84,10 @@ const SectionRSVP = ({ guest }) => {
                 <p className="font-[Hattori] text-zinc-700 tracking-widest">
                   The Wedding Of
                 </p>
-                <p className="font-[parisienne] text-4xl font-semibold text-amber-600">
-                  Mayang & Restu
+                <p className="font-[parisienne] text-4xl font-semibold text-emerald-800">
+                  Reni & Abdul
                 </p>
-                <span>Sabtu, 20 Mei 2023</span>
+                <span>Minggu, 23 Juli 2023</span>
                 <div className="w-full text-center">
                   <img
                     src={qrCode}
@@ -112,13 +112,7 @@ const SectionRSVP = ({ guest }) => {
           </div>
         </div>
       )}
-      <div
-        className={`${
-          guest?.status === "going" || guest?.status === "not Going"
-            ? "hidden"
-            : "w-full h-full flex flex-col overflow-hidden items-start lg:items-center py-10 lg:py-20 justify-center relative"
-        }`}
-      >
+      <div className="h-full flex flex-col px-4 bg-white shadow-xl shadow-emerald-900/30 mt-8 lg:mt-20 w-5/6 mx-auto overflow-hidden items-center lg:items-center py-10 lg:py-20 justify-center relative">
         <div className="absolute -top-6 right-0">
           <img
             src="/orn-top-left.png"
@@ -126,20 +120,17 @@ const SectionRSVP = ({ guest }) => {
             className="w-[180px] lg:w-[250px]"
           />
         </div>
-        <div className="bg-teal-500/30 absolute top-0  w-full h-full -z-50" />
-        <div className="absolute bottom-0 left-0 right-0 w-full -z-50">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path
-              fill="#e7e7e7"
-              fillOpacity="1"
-              d="M0,288L1440,0L1440,320L0,320Z"
-            ></path>
-          </svg>
+        <div className="absolute opacity-60 -top-6 -left-4">
+          <img
+            src="/orn-top-right.png"
+            alt=""
+            className="w-[180px] lg:w-[250px]"
+          />
         </div>
-        <h3 className="text-2xl lg:text-3xl pl-1 text-teal-800">
-          <span className="text-red-500">*</span> Konfirmasi kehadiran
+        <h3 className="relative text-2xl lg:text-3xl text-center pl-1 text-teal-800">
+          Konfirmasi kehadiran
         </h3>
-        <div className="pt-4 lg:pt-14 w-full lg:w-4/6 mx-auto px-2">
+        <div className="relative pt-4 lg:pt-14 w-full lg:w-4/6 mx-auto px-2">
           <form
             onSubmit={handleSubmit(attendForm)}
             className="w-full rounded z-50 h-auto flex flex-col items-start justify-between gap-3"

@@ -25,23 +25,21 @@ const SectionProkes = () => {
   ];
 
   return (
-    <div className="w-full mt-20">
-      <div className="mx-auto bg-zinc-100 shadow-xl shadow-zinc-400/30 w-full lg:w-4/6 h-full flex flex-col items-center justify-between">
-        <div className="text-md lg:text-lg w-full shadow-lg py-3 text-zinc-100 bg-orange-600/80 text-center ">
-          <h1>MOHON UNTUK TETAP MEMATUHI</h1>
-          <h2 className="font-[Hattori]">PROTOKOL KESEHATAN</h2>
-        </div>
-        <div className=" grid grid-cols-2 lg:grid-cols-3 p-12 gap-2 items-center justify-center">
-          {images.map((image) => (
-            <div key={image.id} className=" w-full h-full col-span-1 ">
-              <img
-                src={image.src}
-                alt=""
-                className="w-[200px] lg:w-[150px] object-cover"
-              />
-            </div>
-          ))}
-        </div>
+    <div className=" bg-zinc-100 shadow-xl shadow-zinc-400/30 w-full lg:w-4/6 h-full flex flex-col items-center justify-center">
+      <div className="text-md lg:text-lg w-full shadow-lg py-3 text-zinc-100 bg-gradient-to-r from-emerald-500/80 to-emerald-700/80 text-center ">
+        <h1>MOHON UNTUK TETAP MEMATUHI</h1>
+        <h2 className="font-[Hattori]">PROTOKOL KESEHATAN</h2>
+      </div>
+      <div className=" grid grid-cols-2 lg:grid-cols-3 p-12 gap-2 items-center justify-center">
+        {images.map((image) => (
+          <div key={image.id} className=" w-full h-full col-span-1 ">
+            <img
+              src={image.src}
+              alt=""
+              className="w-[120px] lg:w-[150px] object-cover"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

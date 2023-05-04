@@ -13,11 +13,11 @@ const SectionGallery = () => {
     <>
       <div className="flex flex-col items-center py-10">
         <img src="/images/orn-center.png" alt="" width={220} />
-        <h1 className="text-center border-b-2 border-emerald-800/50  pb-2 mb-4 font-[parisienne] text-4xl lg:text-5xl text-emerald-800/80">
+        <h1 className="text-center border-b-2 border-emerald-800/50  pb-2  font-[parisienne] text-4xl lg:text-5xl text-emerald-800/80">
           Happy Moment
         </h1>
       </div>
-      <div className=" gallery w-full max-w-5xl mx-auto columns-3 gap-0 px-1">
+      <div className="gallery w-full max-w-5xl mx-auto columns-3 gap-0 px-1">
         <div className="mb-0">
           <a href="/gallery/gallery-1.jpg">
             <img

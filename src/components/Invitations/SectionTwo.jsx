@@ -74,7 +74,7 @@ const SectionTwo = () => {
             target="_blank"
             className="py-2 px-5 bg-teal-700 text-teal-50 shadow-lg shadow-teal-100 rounded"
           >
-            Open Maps
+            Buka di Google Maps
           </Link>
         </div>
       </div>

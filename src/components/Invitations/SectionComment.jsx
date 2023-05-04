@@ -61,19 +61,22 @@ const SectionComment = ({ guest }) => {
   };
 
   return (
-    <div className="w-full h-full pt-20">
+    <div className="w-full h-full pt-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 px-2 lg:px-20 gap-0 lg:gap-4 ">
-        <div className="col-span-1 lg:col-span-4 bg-zinc-100 h-fit shadow-xl shadow-zinc-400/50 relative lg:sticky top-0">
-          <div className="py-6 text-center">
+        <div className="col-span-1 lg:col-span-4 bg-zinc-100 h-fit shadow-xl shadow-emerald-900/60 relative lg:sticky top-0">
+          <div className="py-8 text-center">
             <h3 className="text-3xl lg:text-3xl font-[parisienne] text-emerald-800">
               Pesan dan Harapan
             </h3>
+            <p className="text-zinc-500">
+              Berikan do'a dan ucapan terbaik untuk kami
+            </p>
           </div>
           <form
             onSubmit={handleSubmit(formComment)}
             className=" px-4 pb-10 lg:px-10 w-full"
           >
-            <div className="pt-3 antialiased">
+            <div className="pt-2 antialiased">
               <textarea
                 name=""
                 cols="30"
