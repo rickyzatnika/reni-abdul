@@ -101,7 +101,7 @@ const SectionGallery = () => {
             </a>
           </div>
         </div>
-        <div className="w-full absolute -bottom-1 left-0 right-0 -z-50">
+        <div className="w-full absolute -bottom-8 left-0 right-0 -z-50">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
               fill="#DAD8C0"
