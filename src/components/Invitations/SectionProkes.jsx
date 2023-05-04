@@ -25,7 +25,7 @@ const SectionProkes = () => {
   ];
 
   return (
-    <div className="relative bg-[#DAD8C0] shadow-lg  shadow-zinc-400/60 w-full  h-full flex flex-col items-center justify-center py-12">
+    <div className="relative  bg-[#DAD8C0] shadow-lg  shadow-zinc-400/60 w-full  h-full flex flex-col items-center justify-center py-12">
       <div className="flex md:w-4/6 mx-auto items-center justify-between  px-4 w-full  py-14  ">
         <div>
           <h1 className="font-[Hattori] text-3xl text-[#535245] ">PROTOKOL</h1>

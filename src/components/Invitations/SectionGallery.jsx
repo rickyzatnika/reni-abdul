@@ -18,7 +18,7 @@ const SectionGallery = () => {
             Happy Moment
           </h1>
         </div>
-        <div className="gallery w-full max-w-5xl mx-auto columns-3 gap-0 px-1 ">
+        <div className="gallery w-full max-w-5xl mx-auto columns-3 gap-0 px-1 py-12">
           <div className="mb-0">
             <a href="/gallery/gallery-1.jpg">
               <img
@@ -101,7 +101,7 @@ const SectionGallery = () => {
             </a>
           </div>
         </div>
-        <div className="w-full absolute -bottom-8 left-0 right-0 -z-50">
+        <div className="w-full absolute -bottom-1 left-0 right-0 ">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
               fill="#DAD8C0"

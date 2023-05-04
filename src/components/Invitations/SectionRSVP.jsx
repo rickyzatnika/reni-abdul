@@ -112,7 +112,7 @@ const SectionRSVP = ({ guest }) => {
           </div>
         </div>
       )}
-      <div className="h-full flex flex-col px-4 bg-white shadow-xl shadow-emerald-900/30 mt-8 lg:mt-20 w-5/6 mx-auto overflow-hidden items-center lg:items-center py-10 lg:py-20 justify-center relative">
+      <div className="h-full flex flex-col px-4 bg-white shadow-xl shadow-emerald-900/10 mt-8 lg:mt-20 w-5/6 mx-auto overflow-hidden items-center lg:items-center py-10 lg:py-20 justify-center relative">
         <div className="absolute -top-6 right-0">
           <img
             src="/orn-top-left.png"
