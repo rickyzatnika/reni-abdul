@@ -25,11 +25,18 @@ const SectionProkes = () => {
   ];
 
   return (
-    <div className=" bg-zinc-100 shadow-xl shadow-zinc-400/30 w-full lg:w-4/6 h-full flex flex-col items-center justify-center">
-      <div className="text-md lg:text-lg w-full shadow-lg py-3 text-zinc-100 bg-gradient-to-r from-emerald-500/80 to-emerald-700/80 text-center ">
-        <h1>MOHON UNTUK TETAP MEMATUHI</h1>
-        <h2 className="font-[Hattori]">PROTOKOL KESEHATAN</h2>
+    <div className="relative bg-[#DAD8C0] shadow-lg  shadow-zinc-400/60 w-full  h-full flex flex-col items-center justify-center py-12">
+      <div className="flex md:w-4/6 mx-auto items-center justify-between  px-4 w-full  py-14  ">
+        <div>
+          <h1 className="font-[Hattori] text-3xl text-[#535245] ">PROTOKOL</h1>
+          <span className="alex text-4xl text-[#444337]">kesehatan</span>
+        </div>
+        <div className="w-24 h-[2px] bg-[#444337]" />
       </div>
+      <p className="text-[#585749] text-center px-2">
+        Tanpa mengurangi rasa hormat, acara ini menerapkan Protokol Kesehatan,
+        sesuai dengan peraturan & rekomendasi pemerintah.
+      </p>
       <div className=" grid grid-cols-2 lg:grid-cols-3 p-12 gap-2 items-center justify-center">
         {images.map((image) => (
           <div key={image.id} className=" w-full h-full col-span-1 ">

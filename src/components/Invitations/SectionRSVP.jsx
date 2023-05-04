@@ -127,13 +127,16 @@ const SectionRSVP = ({ guest }) => {
             className="w-[180px] lg:w-[250px]"
           />
         </div>
-        <h3 className="relative text-2xl lg:text-3xl text-center pl-1 text-teal-800">
-          Konfirmasi kehadiran
-        </h3>
-        <div className="relative pt-4 lg:pt-14 w-full lg:w-4/6 mx-auto px-2">
+
+        <div className="relative pt-4 lg:pt-14 w-full  mx-auto px-2">
+          <div className="relative w-full lg:w-5/6 mx-auto text-teal-800 pb-6">
+            <h3 className="text-2xl lg:text-3xl">Konfirmasi</h3>{" "}
+            <span className="alex text-4xl">kehadiran</span>
+            <div className="w-24 h-[2px] absolute top-4 right-8 bg-emerald-800 " />
+          </div>
           <form
             onSubmit={handleSubmit(attendForm)}
-            className="w-full rounded z-50 h-auto flex flex-col items-start justify-between gap-3"
+            className="w-full rounded z-50 h-auto px-2 lg:px-20 flex flex-col items-start justify-between gap-3"
           >
             <div className="w-full leading-relaxed mb-3 px-3">
               <div className="flex flex-col flex-nowrap gap-2">

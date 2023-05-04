@@ -78,10 +78,10 @@ const GetId = () => {
               - Minggu, 26 Juli 2023 -
             </p>
             <div className="text-center pt-2 leading-relaxed ">
-              <p>
+              <p className="text-zinc-800">
                 Kepada Yth, <br /> Bapak/Ibu/Saudara/i
               </p>{" "}
-              <p className="capitalize text-2xl py-4 font-semibold font-[parisienne] text-emerald-900">
+              <p className="capitalize text-4xl py-4 alex text-emerald-900">
                 {guest?.name}
               </p>
             </div>

@@ -4,12 +4,12 @@ import { AddToCalendarButton } from "add-to-calendar-button-react";
 
 const SectionThree = () => {
   return (
-    <div className="w-full h-full overflow-hidden relative flex mt-8 lg:mt-24 flex-col items-center justify-between py-8">
+    <div className="w-full h-full py-10 overflow-hidden relative flex flex-col items-center justify-between ">
       <div className="absolute top-0 left-0 right-0 -z-50">
-        <img src="/wood.jpg" alt="" className="w-full h-[540px] lg:h-[420px]" />
+        <img src="/wood.jpg" alt="" className="w-full h-[580px] lg:h-[480px]" />
       </div>
 
-      <div className="mix-blend-overlay text-5xl text-transparent  bg-black/70  bg-clip-text">
+      <div className="mix-blend-overlay text-5xl p-1 text-transparent  bg-black/70  bg-clip-text">
         <h3 className="font-[parisienne] font-semibold ">
           Save <br /> The Date
         </h3>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const SectionOne = () => {
   return (
     <>
-      <div className="w-full h-full relative overflow-hidden bg-gradient-to-tr from-emerald-100/20 via-teal-200/20 to-emerald-100/80">
+      <div className="w-full h-full relative overflow-hidden bg-gradient-to-tr from-zinc-50  to-emerald-50/80">
         <div className="absolute hidden lg:block top-0 -left-10 z-10">
           <img
             src="/orn-top-right.png"
@@ -25,9 +25,9 @@ const SectionOne = () => {
             <img
               src="/images/bismillah.png"
               alt=""
-              className="w-5/6 sm:w-2/6 object-contain"
+              className="w-4/6 sm:w-2/6 object-contain"
             />
-            <p className="text-zinc-800 text-md">
+            <p className="text-zinc-700 text-md">
               Assalamu'alaikum Warahmatullahi Wabarakatuh <br />
               Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud
               menyelenggarakan resepsi pernikahan putra-putri kami

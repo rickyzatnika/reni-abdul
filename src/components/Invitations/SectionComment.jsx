@@ -63,7 +63,7 @@ const SectionComment = ({ guest }) => {
   return (
     <div className="w-full h-full pt-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 px-2 lg:px-20 gap-0 lg:gap-4 ">
-        <div className="col-span-1 lg:col-span-4 bg-zinc-100 h-fit shadow-xl shadow-emerald-900/60 relative lg:sticky top-0">
+        <div className="col-span-1 lg:col-span-4 bg-zinc-100 h-fit shadow-xl shadow-emerald-900/20 relative lg:sticky top-0">
           <div className="py-8 text-center">
             <h3 className="text-3xl lg:text-3xl font-[parisienne] text-emerald-800">
               Pesan dan Harapan
@@ -88,7 +88,7 @@ const SectionComment = ({ guest }) => {
                 })}
               ></textarea>
             </div>
-            <button className="w-full py-2 px-6 bg-gradient-to-tr shadow-lg rounded shadow-black/20 text-zinc-200 hover:text-zinc-100 from-sky-800/80 via-teal-600/80 to-sky-800/80 hover:from-teal-700/90 hover:via-teal-700/90 hover:to-teal-500/90">
+            <button className="w-full py-2 px-6 bg-gradient-to-tr shadow-lg rounded shadow-black/20 text-zinc-200 hover:text-zinc-100 from-emerald-800/90 via-emerald-600/90 to-emerald-700/90">
               {loading ? <span>sedang mengirim...</span> : <span>Kirim</span>}
             </button>
           </form>
