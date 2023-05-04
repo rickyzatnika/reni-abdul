@@ -10,9 +10,7 @@ const SectionThree = () => {
       </div>
 
       <div className="mix-blend-overlay text-5xl p-1 text-transparent  bg-black/70  bg-clip-text">
-        <h3 className="font-[parisienne] font-semibold ">
-          Save <br /> The Date
-        </h3>
+        <h3 className="font-[parisienne] font-semibold ">Save The Date</h3>
       </div>
       <CountDownTimer />
       <AddToCalendarButton
