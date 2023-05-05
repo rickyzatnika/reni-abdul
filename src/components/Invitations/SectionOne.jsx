@@ -23,25 +23,22 @@ const SectionOne = () => {
         </div>
         <div className="w-full relative z-50 text-center py-14 overflow-hidden">
           <div className="w-full flex flex-col items-center justify-center">
-            <motion.div
-              initial={{ y: 30 }}
+            <motion.img
+              initial={{ y: 40 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="w-full"
-            >
-              <img
-                src="/images/bismillah.png"
-                alt=""
-                className="w-4/6 mx-auto sm:w-2/6 object-contain"
-              />
-            </motion.div>
+              transition={{ duration: 0.6, delay: 0.2 }}
+              src="/images/bismillah.png"
+              alt=""
+              className="w-4/6 mx-auto sm:w-2/6 object-contain"
+            />
+
             <motion.p
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-zinc-700 text-md"
+              className="text-zinc-700 text-md px-2"
             >
               Assalamu'alaikum Warahmatullahi Wabarakatuh <br />
               Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud
@@ -52,8 +49,8 @@ const SectionOne = () => {
             <div className="col-span-1 lg:col-span-4 ">
               <div className="w-full flex flex-col items-center justify-center">
                 <motion.img
-                  initial={{ y: 50, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
+                  initial={{ x: 50, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   src="/images/mann.png"
