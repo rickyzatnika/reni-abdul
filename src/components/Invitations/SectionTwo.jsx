@@ -23,7 +23,7 @@ const SectionTwo = () => {
           />
         </div>
 
-        <div className="relative flex items-center justify-between w-5/6 lg:w-4/6 mx-auto pt-12 lg:pt-10">
+        <div className="relative overflow-hidden flex items-center justify-between w-5/6 lg:w-4/6 mx-auto pt-12 lg:pt-10">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}

@@ -21,13 +21,13 @@ const SectionOne = () => {
             className="w-[250px] object-cover"
           />
         </div>
-        <div className="w-full relative z-50 text-center py-14">
+        <div className="w-full relative z-50 text-center py-14 overflow-hidden">
           <div className="w-full flex flex-col items-center justify-center">
             <motion.div
-              initial={{ y: -30 }}
+              initial={{ y: 30 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="w-full"
             >
               <img
