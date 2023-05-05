@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const SectionTwo = () => {
   return (
     <>
       <div className="w-full h-full bg-[#b6b281]/30 relative overflow-hidden">
-        <div className="absolute -top-2 left-0 right-0 w-full -z-40">
+        <div className="absolute -top-2 left-0 right-0 w-full -z-30">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
               fill="#b6b281"
@@ -14,23 +15,53 @@ const SectionTwo = () => {
             ></path>
           </svg>
         </div>
+        <div className="absolute lg:block -top-6 right-0 z-40">
+          <img
+            src="/orn-top-left.png"
+            alt=""
+            className="w-[220px] object-cover"
+          />
+        </div>
 
         <div className="relative flex items-center justify-between w-5/6 lg:w-4/6 mx-auto pt-12 lg:pt-10">
-          <div>
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+          >
             <h3 className="py-2 lg:py-0 text-3xl sm:text-4xl md:text-6xl text-emerald-900">
               Wedding
             </h3>
             <span className="alex text-5xl text-emerald-900">Event</span>
-          </div>
-          <div className="w-28 lg:w-40 h-[2px] lg:h-[4px] bg-emerald-900 " />
+          </motion.div>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="w-28 lg:w-40  h-[2px] lg:h-[4px] bg-emerald-900 "
+          />
         </div>
-        <p className="w-full lg:w-3/6 mx-auto px-4 text-center text-zinc-600 py-4 leading-relaxed">
+        <motion.p
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, delay: 0.3 }}
+          className="w-full relative lg:w-3/6 mx-auto px-4 text-center text-zinc-600 py-4 leading-relaxed"
+        >
           Dengan segala kerendahan hati kami bermaksud ingin mengundang
           Bapak/Ibu/Saudara/i sekalian guna hadir didalam acara pernikahan kami
           yang akan diselenggarakan pada :
-        </p>
+        </motion.p>
         <div className="w-full h-full pt-2 lg:pt-20 flex flex-col items-center justify-evenly">
-          <div className="w-full  py-4 flex flex-col text-center items-center justify-center gap-5 lg:justify-around pt-8">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="w-full  py-4 flex flex-col text-center items-center justify-center gap-5 lg:justify-around pt-8"
+          >
             <div className="w-full flex gap-1 flex-col items-center justify-center">
               <h3 className="text-3xl text-[#444337] ">
                 Akad <span className="alex text-4xl">Nikah</span>
@@ -57,9 +88,15 @@ const SectionTwo = () => {
                 lokasi
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="flex flex-col gap-3 items-center justify-center py-12">
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, delay: 0.4 }}
+          className="flex flex-col gap-3 items-center justify-center py-12"
+        >
           <h3 className="text-3xl text-[#444337]">Resepsi :</h3>
           <div className="flex text-emerald-900 text-xl items-center  gap-4">
             <h3>Sabtu</h3>
@@ -85,7 +122,7 @@ const SectionTwo = () => {
           >
             Buka di Google Maps
           </Link>
-        </div>
+        </motion.div>
       </div>
     </>
   );

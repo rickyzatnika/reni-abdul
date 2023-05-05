@@ -1,6 +1,7 @@
 import React from "react";
 import { IoLogoInstagram } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const SectionOne = () => {
   return (
@@ -22,26 +23,50 @@ const SectionOne = () => {
         </div>
         <div className="w-full relative z-50 text-center py-14">
           <div className="w-full flex flex-col items-center justify-center">
-            <img
-              src="/images/bismillah.png"
-              alt=""
-              className="w-4/6 sm:w-2/6 object-contain"
-            />
-            <p className="text-zinc-700 text-md">
+            <motion.div
+              initial={{ y: -30 }}
+              whileInView={{ y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="w-full"
+            >
+              <img
+                src="/images/bismillah.png"
+                alt=""
+                className="w-4/6 mx-auto sm:w-2/6 object-contain"
+              />
+            </motion.div>
+            <motion.p
+              initial={{ y: 20 }}
+              whileInView={{ y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-zinc-700 text-md"
+            >
               Assalamu'alaikum Warahmatullahi Wabarakatuh <br />
               Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud
               menyelenggarakan resepsi pernikahan putra-putri kami
-            </p>
+            </motion.p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center pt-20 lg:pt-32 gap-10 lg:gap-0 px-10">
             <div className="col-span-1 lg:col-span-4 ">
               <div className="w-full flex flex-col items-center justify-center">
-                <img
+                <motion.img
+                  initial={{ x: 320, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
                   src="/images/mann.png"
                   alt=""
                   className=" w-5/6 lg:w-[250px] mx-auto object-cover"
                 />
-                <div className="w-full flex flex-col items-center gap-2 pt-2">
+                <motion.div
+                  initial={{ y: 30 }}
+                  whileInView={{ y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.9, delay: 0.2 }}
+                  className="w-full flex flex-col items-center gap-2 pt-2"
+                >
                   <h3 className=" font-[parisienne] text-3xl font-medium lg:font-semibold text-emerald-900">
                     Muhammad Abdul Dhani
                   </h3>
@@ -53,7 +78,7 @@ const SectionOne = () => {
                   <Link to="https://instagram.com">
                     <IoLogoInstagram size={28} className="text-pink-800" />
                   </Link>
-                </div>
+                </motion.div>
               </div>
             </div>
             <div className="col-span-1 lg:col-span-4 text-emerald-900/90 font-[parisienne] text-7xl">
@@ -61,12 +86,22 @@ const SectionOne = () => {
             </div>
             <div className="col-span-1 lg:col-span-4">
               <div className="flex flex-col">
-                <img
+                <motion.img
+                  initial={{ x: -320, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
                   src="/images/girls.png"
                   alt=""
                   className=" w-5/6 lg:w-[250px] mx-auto object-cover"
                 />
-                <div className="w-full flex flex-col items-center gap-2 pt-2">
+                <motion.div
+                  initial={{ y: 30 }}
+                  whileInView={{ y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.9, delay: 0.2 }}
+                  className="w-full flex flex-col items-center gap-2 pt-2"
+                >
                   <h3 className="font-[parisienne] text-3xl font-medium lg:font-semibold text-emerald-900">
                     Reni Anggraeni
                   </h3>
@@ -79,7 +114,7 @@ const SectionOne = () => {
                   <Link to="https://instagram.com">
                     <IoLogoInstagram size={28} className="text-pink-800" />
                   </Link>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

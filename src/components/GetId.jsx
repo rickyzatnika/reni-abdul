@@ -65,7 +65,7 @@ const GetId = () => {
 
             <h1 className="text-2xl text-emerald-900 ">Wedding Invitation</h1>
             <img
-              src="/images/couples.png"
+              src="/images/couplesss.png"
               alt=""
               className="w-full sm:w-4/6 object-contain"
             />

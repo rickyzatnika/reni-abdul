@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 import baguetteBox from "baguettebox.js";
 import "baguettebox.js/dist/baguetteBox.min.css";
 
@@ -12,12 +13,18 @@ const SectionGallery = () => {
   return (
     <>
       <div className="w-full h-full relative">
-        <div className="flex flex-col items-center py-10">
+        <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="flex flex-col items-center py-10"
+        >
           <img src="/images/orn-center.png" alt="" width={220} />
           <h1 className="text-center border-b-2 border-emerald-800/50  pb-2  font-[parisienne] text-4xl lg:text-5xl text-emerald-800/80">
             Happy Moment
           </h1>
-        </div>
+        </motion.div>
         <div className="gallery w-full max-w-5xl mx-auto columns-3 gap-0 px-1 py-12">
           <div className="mb-0">
             <a href="/gallery/gallery-1.jpg">

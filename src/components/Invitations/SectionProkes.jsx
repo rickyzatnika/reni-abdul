@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const SectionProkes = () => {
   const images = [
@@ -27,20 +28,41 @@ const SectionProkes = () => {
   return (
     <div className="relative  bg-[#DAD8C0] shadow-lg  shadow-zinc-400/60 w-full  h-full flex flex-col items-center justify-center py-12">
       <div className="flex md:w-4/6 mx-auto items-center justify-between  px-4 w-full  py-6  ">
-        <div>
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, delay: 0.2 }}
+        >
           <h1 className="font-[Hattori] text-3xl text-[#535245] ">PROTOKOL</h1>
           <span className="alex text-4xl text-[#444337]">kesehatan</span>
-        </div>
-        <div className="w-24 h-[2px] bg-[#444337]" />
+        </motion.div>
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, delay: 0.2 }}
+          className="w-24 h-[2px] bg-[#444337]"
+        />
       </div>
-      <p className="text-[#585749] text-center px-2">
+      <motion.p
+        initial={{ y: 30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.9, delay: 0.2 }}
+        className="text-[#585749] text-center px-2"
+      >
         Tanpa mengurangi rasa hormat, acara ini menerapkan Protokol Kesehatan,
         sesuai dengan peraturan & rekomendasi pemerintah.
-      </p>
+      </motion.p>
       <div className=" grid grid-cols-2 lg:grid-cols-3 p-12 gap-2 items-center justify-center">
         {images.map((image) => (
           <div key={image.id} className=" w-full h-full col-span-1 ">
-            <img
+            <motion.img
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, delay: 0.2 }}
               src={image.src}
               alt=""
               className="w-[120px] lg:w-[150px] object-cover"

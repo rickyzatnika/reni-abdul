@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { motion } from "framer-motion";
 
 const SectionRSVP = ({ guest }) => {
   const { register, handleSubmit } = useForm();
@@ -112,7 +113,13 @@ const SectionRSVP = ({ guest }) => {
           </div>
         </div>
       )}
-      <div className="h-full flex flex-col px-4 bg-white shadow-xl shadow-emerald-900/10 mt-8 lg:mt-20 w-5/6 mx-auto overflow-hidden items-center lg:items-center py-10 lg:py-20 justify-center relative">
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="h-full flex flex-col px-4 bg-white shadow-xl shadow-emerald-900/10 mt-8 lg:mt-20 w-5/6 mx-auto overflow-hidden items-center lg:items-center py-10 lg:py-20 justify-center relative"
+      >
         <div className="absolute -top-6 right-0">
           <img
             src="/orn-top-left.png"
@@ -204,7 +211,7 @@ const SectionRSVP = ({ guest }) => {
             )}
           </form>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
