@@ -52,8 +52,8 @@ const SectionOne = () => {
             <div className="col-span-1 lg:col-span-4 ">
               <div className="w-full flex flex-col items-center justify-center">
                 <motion.img
-                  initial={{ x: 320, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
+                  initial={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   src="/images/mann.png"
@@ -87,7 +87,7 @@ const SectionOne = () => {
             <div className="col-span-1 lg:col-span-4">
               <div className="flex flex-col">
                 <motion.img
-                  initial={{ x: -320, opacity: 0 }}
+                  initial={{ x: -50, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 }}
