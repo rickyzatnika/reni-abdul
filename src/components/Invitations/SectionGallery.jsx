@@ -20,18 +20,23 @@ const SectionGallery = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-col items-center py-10"
         >
-          <img src="/images/orn-center.png" alt="" width={220} />
-          <h1 className="text-center border-b-2 border-emerald-800/50  pb-2  font-[parisienne] text-4xl lg:text-5xl text-emerald-800/80">
-            Happy Moment
+          <img
+            src="/images/orn-2.png"
+            alt=""
+            width={220}
+            className="opacity-70 pt-8 "
+          />
+          <h1 className="text-center py-2 text-4xl lg:text-5xl text-[#727251]">
+            Happy <span className="alex text-5xl">Moment</span>
           </h1>
         </motion.div>
-        <div className="gallery w-full max-w-5xl mx-auto columns-3 gap-0 px-1 py-12">
+        <div className="gallery w-full max-w-5xl mx-auto columns-3 gap-0 px-1 py-4">
           <div className="mb-0">
             <a href="/gallery/gallery-1.jpg">
               <img
                 src="/gallery/gallery-1.jpg"
                 alt=""
-                className="border-2 border-teal-800"
+                className="border-2 border-[#727251]"
               />
             </a>
           </div>
@@ -40,7 +45,7 @@ const SectionGallery = () => {
               <img
                 src="/gallery/gallery-2.jpg"
                 alt=""
-                className="border-2 border-teal-800"
+                className="border-2 border-[#727251]"
               />
             </a>
           </div>
@@ -49,7 +54,7 @@ const SectionGallery = () => {
               <img
                 src="/gallery/gallery-3.jpg"
                 alt=""
-                className="border-2 border-teal-800"
+                className="border-2 border-[#727251]"
               />
             </a>
           </div>
@@ -58,7 +63,7 @@ const SectionGallery = () => {
               <img
                 src="/gallery/gallery-4.jpg"
                 alt=""
-                className="border-2 border-teal-800"
+                className="border-2 border-[#727251]"
               />
             </a>
           </div>
@@ -67,7 +72,7 @@ const SectionGallery = () => {
               <img
                 src="/gallery/gallery-5.jpg"
                 alt=""
-                className="border-2 border-teal-800"
+                className="border-2 border-[#727251]"
               />
             </a>
           </div>
@@ -76,7 +81,7 @@ const SectionGallery = () => {
               <img
                 src="/gallery/gallery-6.jpg"
                 alt=""
-                className="border-2 border-teal-800"
+                className="border-2 border-[#727251]"
               />
             </a>
           </div>
@@ -85,7 +90,7 @@ const SectionGallery = () => {
               <img
                 src="/gallery/gallery-10.jpg"
                 alt=""
-                className="border-2 border-teal-800"
+                className="border-2 border-[#727251]"
               />
             </a>
           </div>
@@ -94,7 +99,7 @@ const SectionGallery = () => {
               <img
                 src="/gallery/gallery-11.jpg"
                 alt=""
-                className="border-2 border-teal-800"
+                className="border-2 border-[#727251]"
               />
             </a>
           </div>
@@ -103,7 +108,7 @@ const SectionGallery = () => {
               <img
                 src="/gallery/gallery-1.jpg"
                 alt=""
-                className="border-2 border-teal-800"
+                className="border-2 border-[#727251]"
               />
             </a>
           </div>

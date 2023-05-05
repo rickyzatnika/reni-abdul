@@ -6,13 +6,15 @@ const Header = () => {
       <div className="w-full min-h-screen flex flex-col items-center justify-evenly relative">
         <div className="overflow-hidden">
           <img
-            src="/images/image-1.jpg"
+            src="/images/header.png"
             alt=""
-            className="w-full min-h-screen object-cover object-center absolute top-0 left-0 right-0 -z-50"
+            className="w-full h-full object-cover object-center absolute top-0 left-0 right-0 -z-50"
           />
         </div>
         <div className="w-full min-h-screen absolute top-0 left-0 -z-40 bg-gradient-to-b from-black/40 to-black/60 mix-blend-overlay" />
-        <h1 className="text-zinc-200 text-2xl">The Wedding Of</h1>
+        <h1 className="text-[#272724] rounded-full p-1 px-3 bg-zinc-500/10 backdrop-blur w-fit text-center text-2xl">
+          Undangan Pernikahan
+        </h1>
         <motion.div
           initial={{ scale: 4, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -21,20 +23,14 @@ const Header = () => {
             duration: 0.8,
             delay: 0.3,
           }}
-          className="w-fit relative border-t-2 border-b-2 py-2 text-center flex flex-row gap-4 items-center"
+          className="w-fit alex text-[#a1a163] relative border-t-2 border-b-2 py-2 text-center flex flex-col gap-4 items-center"
         >
-          <h3 className="text-5xl lg:text-8xl font-[parisienne] text-emerald-600/80 font-medium">
-            Reni
-          </h3>
-          <span className="text-emerald-600/80 font-medium font-[parisienne] text-5xl lg:text-8xl ">
-            &
-          </span>
-          <h2 className="text-5xl lg:text-8xl font-[parisienne] text-emerald-600/80 font-medium">
-            Abdul
-          </h2>
+          <h3 className="text-4xl lg:text-5xl  ">Fidyan Lazuardi</h3>
+          <span className=" text-5xl font-[parisienne] lg:text-5xl ">&</span>
+          <h2 className="text-4xl lg:text-5xl ">Fitri Nurramadhanty</h2>
         </motion.div>
         <span className="text-zinc-300 tracking-widest text-xl">
-          Minggu, 23 Juli 2023
+          Minggu, 14 Mei 2023
         </span>
         <div className="flex items-center flex-col gap-2">
           <div className="mouse-icon">

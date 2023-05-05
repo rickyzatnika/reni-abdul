@@ -118,28 +118,13 @@ const SectionRSVP = ({ guest }) => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="h-full flex flex-col px-4 bg-white shadow-xl shadow-emerald-900/10 mt-8 lg:mt-20 w-5/6 mx-auto overflow-hidden items-center lg:items-center py-10 lg:py-20 justify-center relative"
+        className="h-full rounded-t-[35px] flex flex-col px-2 bg-zinc-100 shadow-xl shadow-[#727251]/60 mt-8 lg:mt-20 w-[90%] mx-auto overflow-hidden items-center lg:items-center py-10 lg:py-20 justify-center relative"
       >
-        <div className="absolute -top-6 right-0">
-          <img
-            src="/orn-top-left.png"
-            alt=""
-            className="w-[180px] lg:w-[250px]"
-          />
-        </div>
-        <div className="absolute opacity-60 -top-6 -left-4">
-          <img
-            src="/orn-top-right.png"
-            alt=""
-            className="w-[180px] lg:w-[250px]"
-          />
-        </div>
-
         <div className="relative pt-4 lg:pt-14 w-full  mx-auto px-2">
-          <div className="relative w-full lg:w-5/6 mx-auto text-teal-800 pb-6">
+          <div className="relative w-full lg:w-5/6 mx-auto text-[#727251] pb-6">
             <h3 className="text-2xl lg:text-3xl">Konfirmasi</h3>{" "}
             <span className="alex text-4xl">kehadiran</span>
-            <div className="w-24 h-[2px] absolute top-4 right-8 bg-emerald-800 " />
+            <div className="w-24 h-[2px] absolute top-4 right-8 bg-[#727251] " />
           </div>
           <form
             onSubmit={handleSubmit(attendForm)}
@@ -203,7 +188,7 @@ const SectionRSVP = ({ guest }) => {
 
             {selectedValue && (
               <button
-                className="py-3 px-7 w-full text-white/80 bg-gradient-to-tr shadow-lg rounded shadow-black/20 text-zinc-200 hover:text-zinc-100 from-sky-800/80 via-teal-600/80 to-sky-800/80 hover:from-teal-700/90 hover:via-teal-700/90 hover:to-teal-500/90 "
+                className="py-3 px-7 w-full text-zinc-100 bg-[#a59f72] shadow-lg rounded shadow-black/20 hover:text-zinc-100   "
                 type="submit"
               >
                 {loading ? <span>tunggu sebentar...</span> : <span>Kirim</span>}

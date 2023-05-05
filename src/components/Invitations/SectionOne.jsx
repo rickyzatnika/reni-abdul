@@ -6,21 +6,7 @@ import { motion } from "framer-motion";
 const SectionOne = () => {
   return (
     <>
-      <div className="w-full h-full relative overflow-hidden bg-gradient-to-tr from-zinc-50  to-emerald-50/80">
-        <div className="absolute hidden lg:block top-0 -left-10 z-10">
-          <img
-            src="/orn-top-right.png"
-            alt=""
-            className="w-[250px] object-cover"
-          />
-        </div>
-        <div className="absolute -top-10 right-0 z-10">
-          <img
-            src="/orn-top-left.png"
-            alt=""
-            className="w-[250px] object-cover"
-          />
-        </div>
+      <div className="w-full h-full  relative overflow-hidden bg-gradient-to-t from-[#eeeeea]  to-[#c7c39d]">
         <div className="w-full relative z-50 text-center py-14 overflow-hidden">
           <div className="w-full flex flex-col items-center justify-center">
             <motion.img
@@ -53,9 +39,9 @@ const SectionOne = () => {
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  src="/images/mann.png"
+                  src="/images/man.png"
                   alt=""
-                  className=" w-5/6 lg:w-[250px] mx-auto object-cover"
+                  className=" w-5/6 lg:w-[250px] rounded-tl-[150px] rounded-br-[150px]  mx-auto object-cover"
                 />
                 <motion.div
                   initial={{ y: 30 }}
@@ -64,13 +50,15 @@ const SectionOne = () => {
                   transition={{ duration: 0.9, delay: 0.2 }}
                   className="w-full flex flex-col items-center gap-2 pt-2"
                 >
-                  <h3 className=" font-[parisienne] text-3xl font-medium lg:font-semibold text-emerald-900">
-                    Muhammad Abdul Dhani
+                  <h3 className=" alex text-3xl font-medium  text-[#727251]">
+                    Fidyan Lazuardi
                   </h3>
                   <div className="text-zinc-700 leading-relaxed">
-                    <p className="font-semibold">Putra Ke 1 dari :</p>
-                    <p>Bapak H. Asep Solihin</p> <span>&</span>{" "}
-                    <p>Ibu Hj. Nur Hayati</p>
+                    <p className="font-semibold">
+                      Putra Ke 6 dari 10 Bersaudara :
+                    </p>
+                    <p>Bpk Drs. Walid Syaikun</p> <span>&</span>{" "}
+                    <p>Ibu Ade Nur Hasanah</p>
                   </div>
                   <Link to="https://instagram.com">
                     <IoLogoInstagram size={28} className="text-pink-800" />
@@ -78,7 +66,7 @@ const SectionOne = () => {
                 </motion.div>
               </div>
             </div>
-            <div className="col-span-1 lg:col-span-4 text-emerald-900/90 font-[parisienne] text-7xl">
+            <div className="col-span-1 lg:col-span-4 text-[#5e5e43] font-[parisienne] text-7xl">
               &
             </div>
             <div className="col-span-1 lg:col-span-4">
@@ -88,9 +76,9 @@ const SectionOne = () => {
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  src="/images/girls.png"
+                  src="/images/girl.png"
                   alt=""
-                  className=" w-5/6 lg:w-[250px] mx-auto object-cover"
+                  className=" w-5/6 lg:w-[250px] rounded-tr-[150px] rounded-bl-[150px]  mx-auto object-cover"
                 />
                 <motion.div
                   initial={{ y: 30 }}
@@ -99,15 +87,15 @@ const SectionOne = () => {
                   transition={{ duration: 0.9, delay: 0.2 }}
                   className="w-full flex flex-col items-center gap-2 pt-2"
                 >
-                  <h3 className="font-[parisienne] text-3xl font-medium lg:font-semibold text-emerald-900">
-                    Reni Anggraeni
+                  <h3 className=" alex text-3xl font-medium  text-[#727251]">
+                    Fitri Nurramadhanty
                   </h3>
                   <div className="text-zinc-700 leading-relaxed">
-                    <p className="font-semibold">Putra Ke 3 dari :</p>
-                    <p>Bapak Dedi Kurniawan</p> <span>&</span>{" "}
-                    <p>Ibu Dian Anggraeni</p>
+                    <p className="font-semibold">
+                      Putra Ke 2 dari 5 Bersaudara :
+                    </p>
+                    <p>Bpk Nurpalah</p> <span>&</span> <p>Ibu Reni Anngraeni</p>
                   </div>
-
                   <Link to="https://instagram.com">
                     <IoLogoInstagram size={28} className="text-pink-800" />
                   </Link>

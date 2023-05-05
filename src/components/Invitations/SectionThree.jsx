@@ -9,18 +9,17 @@ const SectionThree = () => {
         <img src="/wood.jpg" alt="" className="w-full h-[580px] lg:h-[480px]" />
       </div>
 
-      <div className="mix-blend-overlay text-5xl p-1 text-transparent  bg-black/70  bg-clip-text">
-        <h3 className="font-[parisienne] font-semibold ">Save The Date</h3>
+      <div className="mix-blend-multiply text-4xl p-1 text-transparent  bg-black/60  bg-clip-text">
+        <h3 className="alex font-semibold tracking-widest">Add to Callendar</h3>
       </div>
       <CountDownTimer />
       <AddToCalendarButton
-        name="The Wedding Of Reni & Abdul"
+        name="The Wedding Of Fidyan & Fitri"
         options="'Google'"
-        location="Jl. Cijengkol No.118, Wangunsari, Kec. Lembang, Kabupaten Bandung
-              Barat, Jawa Barat 40391"
-        startDate="2023-6-22"
-        startTime="09:30"
-        endTime="14:20"
+        location="Perumahan Taman Ciputri Indah, Wangunharja, Lembang, West Bandung Regency, West Java 40391"
+        startDate="2023-5-14"
+        startTime="09:00"
+        endTime="15:00"
         buttonStyle="date"
         timeZone="Asia/Jakarta"
         label=" add to calendar"

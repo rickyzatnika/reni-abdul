@@ -10,7 +10,7 @@ export default function CountDownTimer({ ...props }) {
 
   useEffect(() => {
     const startTimer = () => {
-      const countdownDate = new Date("June 22 2023 00:00:00").getTime();
+      const countdownDate = new Date("May 14 2023 00:00:00").getTime();
       intervalRef.current = setInterval(() => {
         const now = new Date().getTime();
         const distance = countdownDate - now;
@@ -47,7 +47,7 @@ export default function CountDownTimer({ ...props }) {
             <div className="text-center rounded-lg flex flex-col pb-2 shadow-lg bg-gradient-to-tr w-28 h-28 from-zinc-50 to-zinc-200 overflow-hidden  clip">
               {/* Timer Days */}
               <div className=" text-3xl sm:text-5xl m-auto font-bold flex items-center justify-center">
-                <span className="bg-gradient-to-b from-zinc-900 via-zinc-400 to-zinc-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-b from-[#727251] via-zinc-400 to-[#727251] bg-clip-text text-transparent">
                   {timerDays}
                 </span>
               </div>
@@ -58,7 +58,7 @@ export default function CountDownTimer({ ...props }) {
             {/* Timer Hours */}
             <div className="text-center rounded-lg flex flex-col pb-2 shadow-lg  bg-gradient-to-tr w-28  h-28  from-zinc-50 to-zinc-200 overflow-hidden  clip">
               <div className=" text-3xl sm:text-5xl m-auto font-bold flex items-center justify-center">
-                <span className="bg-gradient-to-b from-zinc-900 via-zinc-400 to-zinc-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-b from-[#727251] via-zinc-400 to-[#727251]  bg-clip-text text-transparent">
                   {timerHours}
                 </span>
               </div>
@@ -71,7 +71,7 @@ export default function CountDownTimer({ ...props }) {
             {/* Timer Minutes */}
             <div className="text-center rounded-lg flex flex-col pb-2 shadow-lg  bg-gradient-to-tr w-28  h-28  from-zinc-50 to-zinc-200 overflow-hidden  clip">
               <div className=" text-3xl sm:text-5xl m-auto font-bold flex items-center justify-center">
-                <span className="bg-gradient-to-b from-zinc-900 via-zinc-400 to-zinc-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-b from-[#727251] via-zinc-400 to-[#727251]  bg-clip-text text-transparent">
                   {timerMinutes}
                 </span>
               </div>
@@ -82,7 +82,7 @@ export default function CountDownTimer({ ...props }) {
             {/* Timer Second */}
             <div className="text-center rounded-lg flex flex-col pb-2 shadow-lg  bg-gradient-to-tr w-28  h-28  from-zinc-50 to-zinc-200 overflow-hidden  clip">
               <div className=" text-3xl sm:text-5xl m-auto font-bold flex items-center justify-center">
-                <span className="bg-gradient-to-b from-zinc-900 via-zinc-400 to-zinc-900 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-b from-[#727251] via-zinc-400 to-[#727251]  bg-clip-text text-transparent">
                   {timerSeconds}
                 </span>
               </div>

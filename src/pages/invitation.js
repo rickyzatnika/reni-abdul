@@ -2,16 +2,17 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import useSWR from "swr";
-const Header = lazy(() => import("../components/Invitations/Headers"))
-const SectionOne = lazy(() => import("../components/Invitations/SectionOne"))
-const SectionTwo = lazy(() => import("../components/Invitations/SectionTwo"))
-const SectionThree = lazy(() => import("../components/Invitations/SectionThree"))
-const SectionRSVP = lazy(() => import("../components/Invitations/SectionRSVP"))
-const SectionGallery = lazy(() => import("../components/Invitations/SectionGallery"))
-const SectionProkes = lazy(() => import("../components/Invitations/SectionProkes"))
-const SectionComment = lazy(() => import("../components/Invitations/SectionComment"))
-const Subfooter = lazy(() => import("../components/Invitations/Subfooter"))
-const Footer = lazy(() => import("../components/Invitations/Footer"))
+import Backsound from "../components/Backsound"
+const Header = lazy(() => import("../components/Invitations/Headers"));
+const SectionOne = lazy(() => import("../components/Invitations/SectionOne"));
+const SectionTwo = lazy(() => import("../components/Invitations/SectionTwo"));
+const SectionThree = lazy(() => import("../components/Invitations/SectionThree"));
+const SectionRSVP = lazy(() => import("../components/Invitations/SectionRSVP"));
+const SectionGallery = lazy(() => import("../components/Invitations/SectionGallery"));
+const SectionProkes = lazy(() => import("../components/Invitations/SectionProkes"));
+const SectionComment = lazy(() => import("../components/Invitations/SectionComment"));
+const Subfooter = lazy(() => import("../components/Invitations/Subfooter"));
+const Footer = lazy(() => import("../components/Invitations/Footer"));
 
 
 const Invitation = () => {
@@ -32,8 +33,9 @@ const Invitation = () => {
   return (
 
     <Suspense fallback={<div className="w-full min-h-screen flex items-center justify-center">
-      <img src="/loading.svg" alt="" />
+      <img src="/loader.svg" alt="" />
     </div>}>
+      {/* <Backsound /> */}
       <Header />
       <SectionOne />
       <SectionTwo />
