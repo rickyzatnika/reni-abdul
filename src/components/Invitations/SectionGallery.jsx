@@ -12,7 +12,7 @@ const SectionGallery = () => {
 
   return (
     <>
-      <div className="w-full h-full relative">
+      <div className="w-full h-full pb-20 relative">
         <motion.div
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -26,87 +26,124 @@ const SectionGallery = () => {
             width={220}
             className="opacity-70 pt-8 "
           />
-          <h1 className="text-center py-2 text-4xl lg:text-5xl text-[#727251]">
-            Happy <span className="alex text-5xl">Moment</span>
+          <h1 className="text-center py-2 text-4xl lg:text-5xl text-[#444337] ">
+            Happy <span className="alex text-5xl text-[#bfa95b]">Moment</span>
           </h1>
         </motion.div>
         <div className="gallery w-full max-w-5xl mx-auto columns-3 gap-0 px-1 py-4">
           <div className="mb-0">
-            <a href="/gallery/gallery-1.jpg">
+            <a href="/gallery/gallery-7.png">
               <img
-                src="/gallery/gallery-1.jpg"
+                src="/gallery/gallery-7.png"
                 alt=""
                 className="border-2 border-[#727251]"
               />
             </a>
           </div>
           <div className="mb-0">
-            <a href="/gallery/gallery-2.jpg">
+            <a href="/gallery/gallery-12.png">
               <img
-                src="/gallery/gallery-2.jpg"
+                src="/gallery/gallery-12.png"
                 alt=""
                 className="border-2 border-[#727251]"
               />
             </a>
           </div>
           <div className="mb-0">
-            <a href="/gallery/gallery-3.jpg">
+            <a href="/gallery/gallery-11.png">
               <img
-                src="/gallery/gallery-3.jpg"
+                src="/gallery/gallery-11.png"
                 alt=""
                 className="border-2 border-[#727251]"
               />
             </a>
           </div>
           <div className="mb-0">
-            <a href="/gallery/gallery-4.jpg">
+            <a href="/gallery/gallery-2.png">
               <img
-                src="/gallery/gallery-4.jpg"
+                src="/gallery/gallery-2.png"
                 alt=""
                 className="border-2 border-[#727251]"
               />
             </a>
           </div>
           <div className="mb-0">
-            <a href="/gallery/gallery-5.jpg">
+            <a href="/gallery/gallery-3.png">
               <img
-                src="/gallery/gallery-5.jpg"
+                src="/gallery/gallery-3.png"
                 alt=""
                 className="border-2 border-[#727251]"
               />
             </a>
           </div>
           <div className="mb-0">
-            <a href="/gallery/gallery-6.jpg">
+            <a href="/gallery/gallery-8.png">
               <img
-                src="/gallery/gallery-6.jpg"
+                src="/gallery/gallery-8.png"
                 alt=""
                 className="border-2 border-[#727251]"
               />
             </a>
           </div>
           <div className="mb-0">
-            <a href="/gallery/gallery-10.jpg">
+            <a href="/gallery/gallery-4.png">
               <img
-                src="/gallery/gallery-10.jpg"
+                src="/gallery/gallery-4.png"
                 alt=""
                 className="border-2 border-[#727251]"
               />
             </a>
           </div>
           <div className="mb-0">
-            <a href="/gallery/gallery-11.jpg">
+            <a href="/gallery/gallery-5.png">
               <img
-                src="/gallery/gallery-11.jpg"
+                src="/gallery/gallery-5.png"
+                alt=""
+                className="border-2 border-[#727251]"
+              />
+            </a>
+          </div>
+
+          <div className="mb-0">
+            <a href="/gallery/gallery-6.png">
+              <img
+                src="/gallery/gallery-6.png"
                 alt=""
                 className="border-2 border-[#727251]"
               />
             </a>
           </div>
           <div className="mb-0">
-            <a href="/gallery/gallery-1.jpg">
+            <a href="/gallery/gallery-9.png">
               <img
-                src="/gallery/gallery-1.jpg"
+                src="/gallery/gallery-9.png"
+                alt=""
+                className="border-2 border-[#727251]"
+              />
+            </a>
+          </div>
+          <div className="mb-0">
+            <a href="/gallery/gallery-10.png">
+              <img
+                src="/gallery/gallery-10.png"
+                alt=""
+                className="border-2 border-[#727251]"
+              />
+            </a>
+          </div>
+          <div className="mb-0">
+            <a href="/gallery/gallery-1.png">
+              <img
+                src="/gallery/gallery-1.png"
+                alt=""
+                className="border-2 border-[#727251]"
+              />
+            </a>
+          </div>
+          <div className="mb-0">
+            <a href="/gallery/gallery-13.png">
+              <img
+                src="/gallery/gallery-13.png"
                 alt=""
                 className="border-2 border-[#727251]"
               />

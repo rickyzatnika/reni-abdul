@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const SectionTwo = () => {
   return (
     <>
-      <div className="w-full min-h-screen py-4 pb-10 lg:py-10 lg:h-full bg-gradient-to-t from-[#b6b281] relative ">
+      <div className="w-full min-h-screen py-4 pb-10 lg:py-10 lg:h-full bg-gradient-to-t from-[#F0EABE] relative ">
         <div className="absolute -top-1 left-0 right-0 w-full z-10">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -22,18 +22,19 @@ const SectionTwo = () => {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.2 }}
+            className="mt-3"
           >
-            <h3 className="py-2 lg:py-0 text-3xl sm:text-4xl md:text-6xl text-[#727251]">
+            <h3 className=" text-3xl sm:text-4xl md:text-6xl text-[#bfa95b]">
               Wedding
             </h3>
-            <span className="alex text-5xl text-[#727251]">Event</span>
+            <span className="alex text-5xl text-[#444337]">Event</span>
           </motion.div>
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.2 }}
-            className="w-28 lg:w-40  h-[2px] lg:h-[4px] bg-[#727251] "
+            className="w-28 lg:w-40  h-[2px] lg:h-[4px] bg-[#bfa95b] "
           />
         </div>
         <motion.p
@@ -41,7 +42,7 @@ const SectionTwo = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.3 }}
-          className="w-full relative z-40 lg:w-3/6 mx-auto px-4 text-center text-[#5a5a40] py-4 leading-relaxed"
+          className="w-full relative z-40 lg:w-3/6 mx-auto px-4 text-center  text-[#977a39] py-4 leading-relaxed"
         >
           Dengan segala kerendahan hati kami bermaksud ingin mengundang
           Bapak/Ibu/Saudara/i sekalian guna hadir didalam acara pernikahan kami
@@ -99,7 +100,7 @@ const SectionTwo = () => {
           <Link
             to="https://goo.gl/maps/LZc5fUkvR5isSQ1G6"
             target="_blank"
-            className="py-2 px-5 my-3 bg-[#88835e] text-teal-50  rounded"
+            className="py-2 px-5 my-3 bg-[#9c8450]  hover:bg-[#867041] text-teal-50  rounded"
           >
             Buka di Google Maps
           </Link>

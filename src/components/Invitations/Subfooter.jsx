@@ -26,12 +26,6 @@ const Subfooter = () => {
         </i>
         <p className="text-md lg:text-lg text-zinc-700">QS. An-Nur Ayat 32</p>
       </div>
-      <div className="space-y-3 text-center">
-        <h3 className="text-4xl lg:text-5xl text-emerald-700 ">Reni & Abdul</h3>
-        <p className="text-sm lg:text-lg text-zinc-500">
-          Mengucapkan Terima Kasih yang sebesar-besarnya.
-        </p>
-      </div>
     </div>
   );
 };

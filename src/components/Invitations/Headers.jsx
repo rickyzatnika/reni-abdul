@@ -23,7 +23,7 @@ const Header = () => {
             duration: 0.8,
             delay: 0.3,
           }}
-          className="w-fit alex text-[#a1a163] relative border-t-2 border-b-2 py-2 text-center flex flex-col gap-4 items-center"
+          className="w-fit alex text-[#b69c63] relative border-t-2 border-b-2 py-2 text-center flex flex-col gap-4 items-center"
         >
           <h3 className="text-4xl lg:text-5xl  ">Fidyan Lazuardi</h3>
           <span className=" text-5xl font-[parisienne] lg:text-5xl ">&</span>

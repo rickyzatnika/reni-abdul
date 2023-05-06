@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const SectionOne = () => {
   return (
     <>
-      <div className="w-full h-full  relative overflow-hidden bg-gradient-to-t from-[#eeeeea]  to-[#c7c39d]">
+      <div className="w-full h-full  relative overflow-hidden bg-gradient-to-t from-[#eeeeea]  to-[#d4c787]">
         <div className="w-full relative z-50 text-center py-14 overflow-hidden">
           <div className="w-full flex flex-col items-center justify-center">
             <motion.img
@@ -14,9 +14,9 @@ const SectionOne = () => {
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              src="/images/bismillah.png"
+              src="/images/bismilah.png"
               alt=""
-              className="w-4/6 mx-auto sm:w-2/6 object-contain"
+              className="w-3/6 mx-auto mb-3 sm:w-1/6 object-contain"
             />
 
             <motion.p
@@ -24,7 +24,7 @@ const SectionOne = () => {
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-zinc-700 text-md px-2"
+              className="text-[#977a39] text-md px-2"
             >
               Assalamu'alaikum Warahmatullahi Wabarakatuh <br />
               Dengan memohon Ridho serta Rahmat Allah SWT, kami bermaksud
@@ -50,7 +50,7 @@ const SectionOne = () => {
                   transition={{ duration: 0.9, delay: 0.2 }}
                   className="w-full flex flex-col items-center gap-2 pt-2"
                 >
-                  <h3 className=" alex text-3xl font-medium  text-[#727251]">
+                  <h3 className=" alex text-3xl font-medium  text-[#b69c63]">
                     Fidyan Lazuardi
                   </h3>
                   <div className="text-zinc-700 leading-relaxed">
@@ -66,7 +66,7 @@ const SectionOne = () => {
                 </motion.div>
               </div>
             </div>
-            <div className="col-span-1 lg:col-span-4 text-[#5e5e43] font-[parisienne] text-7xl">
+            <div className="col-span-1 lg:col-span-4 text-[#b69c63] font-[parisienne] text-7xl">
               &
             </div>
             <div className="col-span-1 lg:col-span-4">
@@ -87,7 +87,7 @@ const SectionOne = () => {
                   transition={{ duration: 0.9, delay: 0.2 }}
                   className="w-full flex flex-col items-center gap-2 pt-2"
                 >
-                  <h3 className=" alex text-3xl font-medium  text-[#727251]">
+                  <h3 className=" alex text-3xl font-medium  text-[#b69c63]">
                     Fitri Nurramadhanty
                   </h3>
                   <div className="text-zinc-700 leading-relaxed">

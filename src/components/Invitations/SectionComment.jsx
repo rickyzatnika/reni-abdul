@@ -61,14 +61,18 @@ const SectionComment = ({ guest }) => {
   };
 
   return (
-    <div className="w-full h-full pt-10">
+    <div className="w-full px-2 h-full pt-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 px-2 lg:px-20 gap-0 lg:gap-4 ">
         <div className="col-span-1 lg:col-span-4 bg-zinc-100 h-fit shadow-xl shadow-emerald-900/20 relative lg:sticky top-0">
           <div className="py-8 text-center">
-            <h3 className="text-3xl lg:text-3xl font-[parisienne] text-emerald-800">
-              Pesan dan Harapan
+            <h3 className="text-3xl lg:text-3xl text-[#bfa95b]  ">
+              Pesan{" "}
+              <span className="font-[parisienne] text-5xl text-[#bfa95b]">
+                &
+              </span>{" "}
+              Harapan
             </h3>
-            <p className="text-zinc-500">
+            <p className="text-[#444337]">
               Berikan do'a dan ucapan terbaik untuk kami
             </p>
           </div>
@@ -81,14 +85,14 @@ const SectionComment = ({ guest }) => {
                 name=""
                 cols="30"
                 rows="10"
-                className="w-full p-4 focus:outline-teal-600 focus:border-none placeholder:italic rounded text-zinc-700 border-none  "
+                className="w-full p-4 focus:outline-[#867041] focus:border-none placeholder:italic rounded text-[#444337] border-none  "
                 placeholder="Tulis Pesan ..."
                 {...register("comments", {
                   required: true,
                 })}
               ></textarea>
             </div>
-            <button className="w-full py-2 px-6 bg-gradient-to-tr shadow-lg rounded shadow-black/20 text-zinc-200 hover:text-zinc-100 from-emerald-800/90 via-emerald-600/90 to-emerald-700/90">
+            <button className="w-full py-2 px-6 bg-[#9c8450] hover:bg-[#867041] rounded  text-zinc-200 hover:text-zinc-100 ">
               {loading ? <span>sedang mengirim...</span> : <span>Kirim</span>}
             </button>
           </form>
@@ -98,7 +102,7 @@ const SectionComment = ({ guest }) => {
             <h2 className="text-zinc-100">
               {posts?.length + 1} <span className="italic">Post Comment</span>
             </h2>
-            <ol className="border-l-2  border-teal-600 p-8 dark:border-teal-600/40  ">
+            <ol className="border-l-2  border-[#6e664b] p-8   ">
               <li className="w-full border-b pb-4 border-zinc-700">
                 <div className="absolute w-3 h-3 left-1 lg:left-8 ">
                   <FcOk size={20} />
@@ -117,15 +121,12 @@ const SectionComment = ({ guest }) => {
             </ol>
 
             {posts?.map((post, i) => (
-              <ol
-                key={i}
-                className="border-l-2  border-teal-600 p-8 dark:border-teal-600/40 "
-              >
+              <ol key={i} className="border-l-2  border-[#6e664b] p-8  ">
                 <li className="w-full border-b pb-4 border-zinc-700">
                   <div className="absolute w-3 h-3 left-1 lg:left-8  ">
                     <FcOk size={20} />
                   </div>
-                  <span className="mb-1 text-lg lg:text-xl font-normal  text-zinc-700 dark:text-zinc-100">
+                  <span className="mb-1 capitalize text-lg lg:text-xl font-normal  text-zinc-700 dark:text-zinc-100">
                     {post?.name}
                   </span>
 

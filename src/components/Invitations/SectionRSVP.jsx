@@ -34,8 +34,13 @@ const SectionRSVP = ({ guest }) => {
         });
       } else {
         setTimeout(() => {
-          setModal(true);
-        }, 5000);
+          Swal.fire({
+            text: "Terima kasih atas partisipasinya..",
+            confirmButtonColor: "teal",
+          });
+          setLoading(false);
+        }, 3000);
+
         setLoading(true);
         return () => clearTimeout(setTimeout);
       }
@@ -48,29 +53,29 @@ const SectionRSVP = ({ guest }) => {
   };
 
   // Get QrCode
-  useEffect(() => {
-    const fetchQRCode = async () => {
-      try {
-        const { data } = await axios.get(
-          `${process.env.REACT_APP_URI}/invitation/validate/${guest?.unique_Code}`
-        );
+  // useEffect(() => {
+  //   const fetchQRCode = async () => {
+  //     try {
+  //       const { data } = await axios.get(
+  //         `${process.env.REACT_APP_URI}/invitation/validate/${guest?.unique_Code}`
+  //       );
 
-        setQrCode(data.qrCode);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchQRCode();
-  });
+  //       setQrCode(data.qrCode);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   fetchQRCode();
+  // });
 
-  const close = () => {
-    setModal(false);
-    setLoading(false);
-  };
+  // const close = () => {
+  //   setModal(false);
+  //   setLoading(false);
+  // };
 
   return (
     <>
-      {modal && (
+      {/* {modal && (
         <div className="w-full mx-auto lg:w-4/6 min-h-screen bg-white z-[999999999] fixed top-0 left-0 right-0 flex flex-col justify-center items-center ">
           <div className="w-full h-full absolute z-20 top-0 left-0 right-0 ">
             <img
@@ -112,7 +117,7 @@ const SectionRSVP = ({ guest }) => {
             </button>
           </div>
         </div>
-      )}
+      )} */}
       <motion.div
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -121,10 +126,10 @@ const SectionRSVP = ({ guest }) => {
         className="h-full rounded-t-[35px] flex flex-col px-2 bg-zinc-100 shadow-xl shadow-[#727251]/60 mt-8 lg:mt-20 w-[90%] mx-auto overflow-hidden items-center lg:items-center py-10 lg:py-20 justify-center relative"
       >
         <div className="relative pt-4 lg:pt-14 w-full  mx-auto px-2">
-          <div className="relative w-full lg:w-5/6 mx-auto text-[#727251] pb-6">
-            <h3 className="text-2xl lg:text-3xl">Konfirmasi</h3>{" "}
-            <span className="alex text-4xl">kehadiran</span>
-            <div className="w-24 h-[2px] absolute top-4 right-8 bg-[#727251] " />
+          <div className="relative w-full lg:w-5/6 mx-auto   pb-6">
+            <h3 className="text-2xl lg:text-3xl text-[#444337]">Konfirmasi</h3>{" "}
+            <span className="alex text-4xl text-[#bfa95b]">kehadiran</span>
+            <div className="w-24 h-[2px] absolute top-4 right-8 bg-[#bfa95b] " />
           </div>
           <form
             onSubmit={handleSubmit(attendForm)}
@@ -141,7 +146,7 @@ const SectionRSVP = ({ guest }) => {
                     onChange={() => handleClick("going")}
                   />
                   <label
-                    className="text-zinc-700 text-lg lg:text-xl"
+                    className="text-[#444337] text-lg lg:text-xl"
                     onClick={(e) => {
                       e.preventDefault();
                       handleClick("going");
@@ -163,7 +168,7 @@ const SectionRSVP = ({ guest }) => {
                       e.preventDefault();
                       handleClick("not Going");
                     }}
-                    className="text-zinc-700 text-lg lg:text-xl"
+                    className="text-[#444337] text-lg lg:text-xl"
                   >
                     Maaf, tidak bisa hadir
                   </label>
@@ -172,11 +177,11 @@ const SectionRSVP = ({ guest }) => {
             </div>
             {selectedValue === "going" && (
               <div className="mb-3 w-full">
-                <h3 className="mb-2 text-md text-zinc-700">
+                <h3 className="mb-2 text-md text-[#444337]">
                   Berapa orang yang akan hadir :
                 </h3>
                 <select
-                  className="w-full py-3 px-2 border-none outline-none rounded focus:outline-teal-700"
+                  className="w-full text-[#444337] py-3 px-2 border-none outline-none rounded focus:outline-[#9c8450]"
                   {...register("present", { required: true })}
                 >
                   <option value="1">1 Orang</option>
@@ -188,7 +193,7 @@ const SectionRSVP = ({ guest }) => {
 
             {selectedValue && (
               <button
-                className="py-3 px-7 w-full text-zinc-100 bg-[#a59f72] shadow-lg rounded shadow-black/20 hover:text-zinc-100   "
+                className="py-3 px-7 w-full text-zinc-100 bg-[#9c8450]  hover:bg-[#867041] shadow-lg rounded shadow-black/20 hover:text-zinc-100   "
                 type="submit"
               >
                 {loading ? <span>tunggu sebentar...</span> : <span>Kirim</span>}

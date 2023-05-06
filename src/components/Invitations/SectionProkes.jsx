@@ -34,7 +34,7 @@ const SectionProkes = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.2 }}
         >
-          <h1 className="font-[Hattori] text-3xl text-[#535245] ">PROTOKOL</h1>
+          <h1 className="font-[Hattori] text-3xl text-[#bfa95b]  ">PROTOKOL</h1>
           <span className="alex text-4xl text-[#444337]">kesehatan</span>
         </motion.div>
         <motion.div
@@ -42,7 +42,7 @@ const SectionProkes = () => {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="w-24 h-[2px] bg-[#444337]"
+          className="w-24 h-[2px] bg-[#bfa95b]"
         />
       </div>
       <motion.p
@@ -50,7 +50,7 @@ const SectionProkes = () => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.9, delay: 0.2 }}
-        className="text-[#585749] text-center px-2"
+        className="text-[#444337] text-center px-2"
       >
         Tanpa mengurangi rasa hormat, acara ini menerapkan Protokol Kesehatan,
         sesuai dengan peraturan & rekomendasi pemerintah.

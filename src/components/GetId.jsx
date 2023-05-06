@@ -64,7 +64,7 @@ const GetId = () => {
               alt=""
               className="w-4/6 sm:w-2/6 object-cover"
             />
-            <div className="flex items-center text-[#b1b16c] justify-center gap-3 flex-row alex">
+            <div className="flex items-center text-[#9c8450] justify-center gap-3 flex-row alex">
               <h3 className="text-4xl lg:text-5xl  ">Fidyan</h3>
               <span className="text-4xl lg:text-5xl ">&</span>
               <h4 className="text-4xl lg:text-5xl  ">Fitri</h4>
@@ -101,7 +101,7 @@ const GetId = () => {
               <button
                 onClick={() => handleClick("Opened")}
                 type="submit"
-                className="py-2 flex items-center gap-1 cursor-pointer px-5 bg-[#a0a061] shadow-lg rounded shadow-black/20 text-zinc-200 hover:text-zinc-100 hover:bg-[#8b8b53] "
+                className="py-2 flex items-center gap-1 cursor-pointer px-5 shadow-lg rounded shadow-black/20 text-zinc-200 hover:text-zinc-100 bg-[#9c8450]  hover:bg-[#867041] "
               >
                 <GiLoveLetter size={30} />
                 Buka Undangan
