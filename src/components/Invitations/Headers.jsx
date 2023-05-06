@@ -27,14 +27,14 @@ const Header = () => {
         >
           <div>
             <h3 className="text-4xl lg:text-5xl  ">Fidyan Lazuardi</h3>
-            <span className="italic text-2xl font-sans text-zinc-100">
-              (Pidi)
+            <span className="italic text-xl font-sans text-[#7a5c09] md:text-zinc-100">
+              ( Pidi )
             </span>
           </div>
           <span className=" text-5xl font-[parisienne] lg:text-5xl ">&</span>
           <div>
-            <span className="italic text-2xl font-sans text-zinc-100">
-              (Fitri)
+            <span className="italic text-xl font-sans text-zinc-300">
+              ( Fitri )
             </span>
             <h2 className="text-4xl lg:text-5xl ">Fitri Nurramadhanty</h2>
           </div>

@@ -111,7 +111,7 @@ const SectionComment = ({ guest }) => {
                   WebHouse Invitation
                 </span>
                 <p className="mb-2 p-2 text-sm leading-relaxed lg:text-md font-thin text-zinc-300 ">
-                  Happy wedding Rahmadi & Dinda, semoga menjadi keluarga yang
+                  Happy wedding Pidi & Fitri, semoga menjadi keluarga yang
                   Sakinah, Mawadah & Warohmah.. Amiin .. 🤲
                 </p>
                 <small className="text-zinc-500 p-2 ">
@@ -126,7 +126,7 @@ const SectionComment = ({ guest }) => {
                   <div className="absolute w-3 h-3 left-1 lg:left-8  ">
                     <FcOk size={20} />
                   </div>
-                  <span className="mb-1 capitalize text-lg lg:text-xl font-normal  text-zinc-700 dark:text-zinc-100">
+                  <span className="mb-1 capitalize text-lg lg:text-xl font-sans  text-zinc-300 ">
                     {post?.name}
                   </span>
 
@@ -138,16 +138,16 @@ const SectionComment = ({ guest }) => {
                 </li>
 
                 {!post?.reply ? (
-                  <span className="text-md italic dark:text-zinc-600/70">
+                  <span className="text-md italic text-zinc-500">
                     Belum ada balasan ...
                   </span>
                 ) : (
                   <div className="bg-zinc-400/10 w-full h-auto pb-10 pt-2 px-2 shadow-md shadow-black-20 relative">
-                    <h1 className="mb-2  text-md italic dark:text-zinc-500">
-                      Balasan...
+                    <h1 className="mb-2  text-md text-zinc-400">
+                      Balasan dari Pidi & Fitri
                     </h1>
-                    <div className="relative left-4">
-                      <p className="text-zinc-300 text-md">{post?.reply}</p>
+                    <div className="relative ">
+                      <p className="text-zinc-500 text-md">{post?.reply}</p>
                     </div>
                   </div>
                 )}
