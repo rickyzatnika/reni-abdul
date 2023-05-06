@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const SectionOne = () => {
   return (
     <>
-      <div className="w-full h-full  relative overflow-hidden bg-gradient-to-t from-[#eeeeea]  to-[#d4c787]">
+      <div className="w-full h-full  relative overflow-hidden bg-gradient-to-t from-[#eeeeea]  to-[#ebe1b3]">
         <div className="w-full relative z-50 text-center py-14 overflow-hidden">
           <div className="w-full flex flex-col items-center justify-center">
             <motion.img

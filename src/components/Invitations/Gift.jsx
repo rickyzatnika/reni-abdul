@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { AiOutlineCopy } from "react-icons/ai";
+import { MdOutlineWhatsapp } from "react-icons/md";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const Gift = () => {
@@ -61,6 +63,12 @@ const Gift = () => {
               <AiOutlineCopy size={20} />
               <span className="text-md tracking-wider">Copy</span>
             </button>
+            <a href="https://wasap.at/EeRq0M">
+              <button className="flex items-center rounded gap-1 mt-5 py-2 text-zinc-100 px-6 bg-[#bfa95b]">
+                <MdOutlineWhatsapp size={20} />
+                <span className="text-md tracking-wider">Confirm</span>
+              </button>
+            </a>
           </div>
         </div>
       </div>

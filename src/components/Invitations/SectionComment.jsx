@@ -63,7 +63,7 @@ const SectionComment = ({ guest }) => {
   return (
     <div className="w-full px-2 h-full pt-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 px-2 lg:px-20 gap-0 lg:gap-4 ">
-        <div className="col-span-1 lg:col-span-4 bg-zinc-100 h-fit shadow-xl shadow-emerald-900/20 relative lg:sticky top-0">
+        <div className="col-span-1 lg:col-span-4 bg-zinc-100 h-fit shadow-xl shadow-[#9c8450]/40 relative lg:sticky top-0">
           <div className="py-8 text-center">
             <h3 className="text-3xl lg:text-3xl text-[#bfa95b]  ">
               Pesan{" "}

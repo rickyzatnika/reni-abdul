@@ -3,8 +3,9 @@ import React, { lazy, Suspense, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import useSWR from "swr";
 import Gift from '../components/Invitations/Gift';
-import Backsound from "../components/Backsound"
+
 const Header = lazy(() => import("../components/Invitations/Headers"));
+const Backsound = lazy(() => import("../components/Invitations/Backsound"));
 const SectionOne = lazy(() => import("../components/Invitations/SectionOne"));
 const SectionTwo = lazy(() => import("../components/Invitations/SectionTwo"));
 const SectionThree = lazy(() => import("../components/Invitations/SectionThree"));

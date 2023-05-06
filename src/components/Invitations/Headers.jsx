@@ -12,8 +12,8 @@ const Header = () => {
           />
         </div>
         <div className="w-full min-h-screen absolute top-0 left-0 -z-40 bg-gradient-to-b from-black/50 to-black/60 mix-blend-overlay" />
-        <h1 className="text-[#a1873e] relative z-50 rounded-full bg-zinc-200/60 py-1 px-5  backdrop-blur w-fit text-center text-2xl">
-          The <span className="alex text-3xl tracking-widest">wedding</span> of
+        <h1 className="text-[#7a5c09] relative z-50 rounded-full bg-zinc-200/60 py-1 px-5  backdrop-blur w-fit text-center text-xl">
+          The <span className="alex text-3xl tracking-widest">wedding</span> Of
         </h1>
         <motion.div
           initial={{ scale: 4, opacity: 0 }}
@@ -25,7 +25,12 @@ const Header = () => {
           }}
           className="w-fit alex text-[#b69c63] relative border-t-2 border-b-2 py-2 text-center flex flex-col gap-4 items-center"
         >
-          <h3 className="text-4xl lg:text-5xl  ">Fidyan Lazuardi</h3>
+          <div>
+            <h3 className="text-4xl lg:text-5xl  ">Fidyan Lazuardi</h3>
+            <span className="italic text-2xl font-sans text-zinc-100">
+              (pidi)
+            </span>
+          </div>
           <span className=" text-5xl font-[parisienne] lg:text-5xl ">&</span>
           <h2 className="text-4xl lg:text-5xl ">Fitri Nurramadhanty</h2>
         </motion.div>

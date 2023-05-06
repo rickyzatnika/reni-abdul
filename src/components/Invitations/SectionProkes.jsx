@@ -26,7 +26,7 @@ const SectionProkes = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-[#DAD8C0] shadow-lg  shadow-zinc-400/60 w-full  h-full flex flex-col items-center justify-center py-12">
+    <div className="relative overflow-hidden bg-[#DAD8C0] shadow-xl  shadow-[#9c8450]/40 w-full  h-full flex flex-col items-center justify-center py-12">
       <div className="flex md:w-4/6 mx-auto items-center justify-between  px-4 w-full  py-6  ">
         <motion.div
           initial={{ x: -50, opacity: 0 }}

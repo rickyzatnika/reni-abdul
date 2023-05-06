@@ -8,9 +8,9 @@ const BackSound = () => {
 
   useEffect(() => {
     if (isPlay) {
-      audioEl.current.play();
-    } else {
       audioEl.current.pause();
+    } else {
+      audioEl.current.play();
     }
   }, [isPlay]);
 
@@ -26,17 +26,17 @@ const BackSound = () => {
         className="cursor-pointer rounded-full backdrop-blur w-fit shadow-lg shadow-white/40 transition-all duration-700 delay-75 ease-linear p-2 bg-gradient-to-tr from-[#9c8450] via-[#665531] to-[#9c8450]"
       >
         {isPlay ? (
-          <HiPause
-            size={25}
-            className={`text-zinc-100/80 shadow rounded-full shadow-black/40 ${
-              isPlay === true ? "animate-spin" : "animate-none"
-            }`}
-          />
-        ) : (
           <HiPlay
             size={25}
             className={`text-zinc-100/80 shadow rounded-full shadow-black/40 ${
-              isPlay === false ? "animate-none" : "animate-spin"
+              isPlay === false ? "animate-spin" : "animate-none"
+            }`}
+          />
+        ) : (
+          <HiPause
+            size={25}
+            className={`text-zinc-100/80 shadow rounded-full shadow-black/40 ${
+              isPlay === true ? "animate-none" : "animate-spin"
             }`}
           />
         )}

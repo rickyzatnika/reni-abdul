@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import Invitation from "../pages/invitation";
+import Home from "../pages/home";
 import { AnimatePresence } from "framer-motion";
 
 import React, { lazy, Suspense } from 'react';
@@ -19,6 +20,7 @@ const AnimatedRoutes = () => {
                     </div>}>
                         <GetId />
                     </Suspense>} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/invitation/:uuid" element={<Invitation />} />
                 </Routes>
             </AnimatePresence>
