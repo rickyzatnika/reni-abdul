@@ -6,7 +6,7 @@ const SectionThree = () => {
   return (
     <div className="w-full h-full py-10 overflow-hidden relative flex flex-col items-center justify-between ">
       <div className="absolute top-0 left-0 right-0 -z-50">
-        <img src="/wood.jpg" alt="" className="w-full h-[580px] lg:h-[480px]" />
+        <img src="/wood.png" alt="" className="w-full h-[580px] lg:h-[480px]" />
       </div>
 
       <div className="mix-blend-multiply text-4xl p-1 text-transparent  bg-black/60  bg-clip-text">

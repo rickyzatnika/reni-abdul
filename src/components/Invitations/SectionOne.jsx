@@ -55,7 +55,7 @@ const SectionOne = () => {
                   </h3>
                   <div className="text-zinc-700 leading-relaxed">
                     <p className="font-semibold">Putra dari :</p>
-                    <p>Bpk Drs. Walid Syaikun</p> <span>&</span>{" "}
+                    <p>Bpk Drs. Walid Syaikhun</p> <span>&</span>{" "}
                     <p>Ibu Ade Nur Hasanah</p>
                   </div>
                   <Link to="https://instagram.com">
