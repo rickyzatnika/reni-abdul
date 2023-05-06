@@ -35,7 +35,7 @@ const Invitation = () => {
   return (
 
     <Suspense fallback={<div className="w-full min-h-screen flex items-center justify-center">
-      <img src="/loader.svg" alt="" />
+      <img src="/loaders.svg" alt="" />
     </div>}>
 
       <Header />

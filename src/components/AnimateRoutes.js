@@ -16,7 +16,7 @@ const AnimatedRoutes = () => {
             <AnimatePresence mode="wait">
                 <Routes key={location.pathname} location={location}>
                     <Route path="/:uuid" element={<Suspense fallback={<div className="w-full min-h-screen flex items-center justify-center bg-white">
-                        <img src="loader.svg" alt="" />
+                        <img src="loaders.svg" alt="" />
                     </div>}>
                         <GetId />
                     </Suspense>} />
