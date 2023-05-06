@@ -21,7 +21,7 @@ const SectionTwo = () => {
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             className="mt-3"
           >
             <h3 className=" text-3xl sm:text-4xl md:text-6xl text-[#bfa95b]">
@@ -33,7 +33,7 @@ const SectionTwo = () => {
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             className="w-28 lg:w-40  h-[2px] lg:h-[4px] bg-[#bfa95b] "
           />
         </div>
@@ -41,7 +41,7 @@ const SectionTwo = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.9, delay: 0.3 }}
+          transition={{ duration: 0.4, delay: 0.3 }}
           className="w-full relative z-40 lg:w-3/6 mx-auto px-4 text-center  text-[#977a39] py-4 leading-relaxed"
         >
           Dengan segala kerendahan hati kami bermaksud ingin mengundang
@@ -53,7 +53,7 @@ const SectionTwo = () => {
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
             className="w-full  py-4 flex flex-col text-center items-center justify-center gap-5 lg:justify-around pt-8"
           >
             <div className="w-full flex gap-4 flex-col items-center justify-center">
@@ -75,7 +75,7 @@ const SectionTwo = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.9, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.3 }}
           className="flex flex-col gap-4 items-center justify-center py-12"
         >
           <h3 className="text-3xl text-[#444337]">Resepsi :</h3>

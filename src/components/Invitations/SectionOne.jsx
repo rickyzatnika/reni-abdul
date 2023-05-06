@@ -13,7 +13,7 @@ const SectionOne = () => {
               initial={{ y: 40 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               src="/images/bismilah.png"
               alt=""
               className="w-3/6 mx-auto mb-3 sm:w-1/6 object-contain"
@@ -23,7 +23,7 @@ const SectionOne = () => {
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.4 }}
               className="text-[#977a39] text-md px-2"
             >
               Assalamu'alaikum Warahmatullahi Wabarakatuh <br />
@@ -38,10 +38,10 @@ const SectionOne = () => {
                   initial={{ x: 50, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
                   src="/images/man.png"
                   alt=""
-                  className=" w-5/6 lg:w-[250px] rounded-tl-[150px] rounded-br-[150px]  mx-auto object-cover"
+                  className=" w-4/6 lg:w-[250px] mb-3 rounded-[80px] shadow-black/70 shadow-xl mx-auto object-cover"
                 />
                 <motion.div
                   initial={{ y: 30 }}
@@ -75,16 +75,16 @@ const SectionOne = () => {
                   initial={{ x: -50, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
                   src="/images/girl.png"
                   alt=""
-                  className=" w-5/6 lg:w-[250px] rounded-tr-[150px] rounded-bl-[150px]  mx-auto object-cover"
+                  className=" w-4/6 lg:w-[250px] mb-3 shadow-black/70 shadow-xl rounded-[80px] mx-auto object-cover"
                 />
                 <motion.div
                   initial={{ y: 30 }}
                   whileInView={{ y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.9, delay: 0.2 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
                   className="w-full flex flex-col items-center gap-2 pt-2"
                 >
                   <h3 className=" alex text-3xl font-medium  text-[#b69c63]">

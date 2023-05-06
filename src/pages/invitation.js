@@ -2,6 +2,7 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import useSWR from "swr";
+import Gift from '../components/Invitations/Gift';
 import Backsound from "../components/Backsound"
 const Header = lazy(() => import("../components/Invitations/Headers"));
 const SectionOne = lazy(() => import("../components/Invitations/SectionOne"));
@@ -43,6 +44,7 @@ const Invitation = () => {
       <SectionRSVP guest={guest} />
       <SectionGallery />
       <SectionProkes />
+      <Gift />
       <SectionComment guest={guest} />
       <Subfooter />
       <Footer />
