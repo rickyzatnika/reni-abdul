@@ -10,10 +10,10 @@ const SectionOne = () => {
         <div className="w-full relative z-50 text-center py-14 overflow-hidden">
           <div className="w-full flex flex-col items-center justify-center">
             <motion.img
-              initial={{ y: 40 }}
+              initial={{ y: -50 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               src="/images/bismilah.png"
               alt=""
               className="w-3/6 mx-auto mb-3 sm:w-1/6 object-contain"
@@ -23,7 +23,7 @@ const SectionOne = () => {
               initial={{ y: 20 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="text-[#977a39] text-md px-2"
             >
               Assalamu'alaikum Warahmatullahi Wabarakatuh <br />
@@ -35,10 +35,10 @@ const SectionOne = () => {
             <div className="col-span-1 lg:col-span-4 ">
               <div className="w-full flex flex-col items-center justify-center">
                 <motion.img
-                  initial={{ x: 50, opacity: 0 }}
+                  initial={{ x: 80, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.3 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
                   src="/images/man.png"
                   alt=""
                   className=" w-4/6 lg:w-[250px] mb-3 rounded-[80px] shadow-black/70 shadow-xl mx-auto object-cover"

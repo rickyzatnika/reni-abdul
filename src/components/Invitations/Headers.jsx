@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Header = () => {
   return (
     <>
-      <div className="w-full min-h-screen flex flex-col items-center justify-evenly relative">
+      <div className="w-full min-h-screen overflow-hidden flex flex-col items-center justify-evenly relative">
         <div className="overflow-hidden">
           <img
             src="/images/header.png"

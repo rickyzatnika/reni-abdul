@@ -53,7 +53,7 @@ const SectionTwo = () => {
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="w-full  py-4 flex flex-col text-center items-center justify-center gap-5 lg:justify-around pt-8"
           >
             <div className="w-full flex gap-4 flex-col items-center justify-center">
@@ -75,7 +75,7 @@ const SectionTwo = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="flex flex-col gap-4 items-center justify-center py-12"
         >
           <h3 className="text-3xl text-[#444337]">Resepsi :</h3>
@@ -88,7 +88,13 @@ const SectionTwo = () => {
           </div>
           <p className="text-md text-[#444337] ">Pukul 11.00 - selesai</p>
         </motion.div>
-        <div className="text-center px-2 flex gap-3 flex-col items-center justify-center leading-relaxed">
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-center px-2 flex gap-3 flex-col items-center justify-center leading-relaxed"
+        >
           <span className="text-[#444337]">Lokasi :</span>
           <p className="text-md font-semibold text-[#444337]">
             Villa Bayu Lembang <br />
@@ -104,7 +110,7 @@ const SectionTwo = () => {
           >
             Buka di Google Maps
           </Link>
-        </div>
+        </motion.div>
       </div>
     </>
   );

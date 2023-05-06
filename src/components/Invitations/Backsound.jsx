@@ -8,9 +8,9 @@ const BackSound = () => {
 
   useEffect(() => {
     if (isPlay) {
-      audioEl.current.pause();
-    } else {
       audioEl.current.play();
+    } else {
+      audioEl.current.pause();
     }
   }, [isPlay]);
 
@@ -19,24 +19,37 @@ const BackSound = () => {
     setIsPlay(!isPlay);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsPlay(true);
+      audioEl.current.play();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="fixed z-50 top-4 left-4">
+    <div className="fixed  z-[99] top-4 left-4">
       <button
         onClick={togglePlay}
         className="cursor-pointer rounded-full backdrop-blur w-fit shadow-lg shadow-white/40 transition-all duration-700 delay-75 ease-linear p-2 bg-gradient-to-tr from-[#9c8450] via-[#665531] to-[#9c8450]"
       >
         {isPlay ? (
-          <HiPlay
-            size={25}
-            className={`text-zinc-100/80 shadow rounded-full shadow-black/40 ${
-              isPlay === false ? "animate-spin" : "animate-none"
-            }`}
-          />
-        ) : (
           <HiPause
             size={25}
             className={`text-zinc-100/80 shadow rounded-full shadow-black/40 ${
-              isPlay === true ? "animate-none" : "animate-spin"
+              isPlay === true ? "animate-spin" : "animate-none"
+            }`}
+          />
+        ) : (
+          <HiPlay
+            size={25}
+            className={`text-zinc-100/80 shadow rounded-full shadow-black/40 ${
+              isPlay === false ? "animate-none" : "animate-spin"
             }`}
           />
         )}
@@ -49,16 +62,3 @@ const BackSound = () => {
 };
 
 export default BackSound;
-
-// useEffect(() => {
-//   const handleScroll = () => {
-//     setIsPlay(true);
-//     audioEl.current.play();
-//   };
-
-//   window.addEventListener("scroll", handleScroll);
-
-//   return () => {
-//     window.removeEventListener("scroll", handleScroll);
-//   };
-// }, []);
