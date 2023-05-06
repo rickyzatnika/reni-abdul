@@ -28,11 +28,16 @@ const Header = () => {
           <div>
             <h3 className="text-4xl lg:text-5xl  ">Fidyan Lazuardi</h3>
             <span className="italic text-2xl font-sans text-zinc-100">
-              (pidi)
+              (Pidi)
             </span>
           </div>
           <span className=" text-5xl font-[parisienne] lg:text-5xl ">&</span>
-          <h2 className="text-4xl lg:text-5xl ">Fitri Nurramadhanty</h2>
+          <div>
+            <span className="italic text-2xl font-sans text-zinc-100">
+              (Fitri)
+            </span>
+            <h2 className="text-4xl lg:text-5xl ">Fitri Nurramadhanty</h2>
+          </div>
         </motion.div>
         <span className="text-zinc-300 tracking-widest text-xl">
           Minggu, 14 Mei 2023

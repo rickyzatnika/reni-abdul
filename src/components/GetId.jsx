@@ -56,7 +56,7 @@ const GetId = () => {
         <div className="w-full min-h-screen bg-gradient-to-t mix-blend-overlay from-black/80 to-transparent absolute top-0 -z-40" />
         <AnimatedPage>
           <div className="w-full lg:w-3/6 h-full overflow-hidden rounded-xl z-50 relative shadow-lg shadow-zinc-500 bg-[#969167]/10  flex flex-col items-center gap-4 py-4 justify-center ">
-            <h1 className="text-xl py-2 tracking-wider rounded-xl w-fit px-5 text-center bg-zinc-600/40 backdrop-blur  text-[#ebebeb] ">
+            <h1 className="text-xl py-1 tracking-wider rounded-xl w-fit px-5 text-center font-semibold bg-zinc-400/20 backdrop-blur  text-[#4e3a03] ">
               Wedding Invitation
             </h1>
             <img
@@ -64,10 +64,20 @@ const GetId = () => {
               alt=""
               className="w-4/6 sm:w-2/6 object-cover"
             />
-            <div className="flex items-center text-[#9c8450] justify-center gap-3 flex-row alex">
-              <h3 className="text-4xl lg:text-5xl  ">Fidyan</h3>
+            <div className="flex items-start mb-5 text-[#9c8450] justify-center gap-3 flex-row alex">
+              <div className="text-center">
+                <h3 className="text-4xl lg:text-5xl  ">Fidyan </h3>
+                <span className="font-sans italic text-zinc-300 text-[19px]">
+                  (pidi)
+                </span>
+              </div>
               <span className="text-4xl lg:text-5xl ">&</span>
-              <h4 className="text-4xl lg:text-5xl  ">Fitri</h4>
+              <div className="text-center">
+                <h3 className="text-4xl lg:text-5xl  ">Fitri </h3>
+                <span className="font-sans italic text-zinc-300 text-[19px]">
+                  (fitri)
+                </span>
+              </div>
             </div>
             <p className="text-zinc-300 text-lg w-full lg:w-5/6 text-center p-1 lg:p-2 px-3 rounded-md">
               - Minggu, 14 Mei 2023 -
