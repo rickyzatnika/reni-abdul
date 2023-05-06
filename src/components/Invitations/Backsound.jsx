@@ -19,19 +19,6 @@ const BackSound = () => {
     setIsPlay(!isPlay);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsPlay(true);
-      audioEl.current.play();
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <div className="fixed  z-[99] top-4 left-4">
       <button
