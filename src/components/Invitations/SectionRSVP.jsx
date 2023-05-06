@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/role-has-required-aria-props */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -7,11 +7,11 @@ import Swal from "sweetalert2";
 import { motion } from "framer-motion";
 
 const SectionRSVP = ({ guest }) => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const [selectedValue, setSelectedValue] = useState("");
-  const [qrCode, setQrCode] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [modal, setModal] = useState(false);
+  // const [qrCode, setQrCode] = useState([]);
+  // const [modal, setModal] = useState(false);
 
   const { uuid } = useParams();
 
@@ -30,20 +30,30 @@ const SectionRSVP = ({ guest }) => {
       if (!status && selectedValue === "not Going") {
         Swal.fire({
           text: "Terima kasih atas partisipasinya..",
-          confirmButtonColor: "teal",
+          confirmButtonColor: "#bfa95b",
+        });
+      } else if (!status && !selectedValue) {
+        Swal.fire({
+          icon: "error",
+          text: "Anda belum memilih Hadir / Tidak Hadir",
+          confirmButtonColor: "#bfa95b",
+          confirmButtonText: "close",
         });
       } else {
         setTimeout(() => {
           Swal.fire({
             text: "Terima kasih atas partisipasinya..",
-            confirmButtonColor: "teal",
+            confirmButtonColor: "#bfa95b",
           });
           setLoading(false);
+          reset();
         }, 3000);
 
         setLoading(true);
+
         return () => clearTimeout(setTimeout);
       }
+      reset();
     } catch (error) {
       console.log(error);
     }
@@ -141,7 +151,7 @@ const SectionRSVP = ({ guest }) => {
                   <input
                     type="radio"
                     value="going"
-                    {...register("status", { required: true })}
+                    {...register("status")}
                     checked={selectedValue === "going"}
                     onChange={() => handleClick("going")}
                   />
@@ -159,7 +169,7 @@ const SectionRSVP = ({ guest }) => {
                   <input
                     type="radio"
                     value="not Going"
-                    {...register("status", { required: true })}
+                    {...register("status")}
                     checked={selectedValue === "not Going"}
                     onChange={() => handleClick("not Going")}
                   />
@@ -175,6 +185,22 @@ const SectionRSVP = ({ guest }) => {
                 </div>
               </div>
             </div>
+            {!selectedValue && (
+              <div className="mb-3 w-full">
+                <h3 className="mb-2 text-md text-[#444337]">
+                  Berapa orang yang akan hadir :
+                </h3>
+                <select
+                  className="w-full text-[#444337] py-3 px-2 border-none outline-none rounded focus:outline-[#9c8450]"
+                  {...register("present", { required: true })}
+                >
+                  <option value="1">1 Orang</option>
+                  <option value="2">2 Orang</option>
+                  <option value="3">3 Orang</option>
+                </select>
+              </div>
+            )}
+
             {selectedValue === "going" && (
               <div className="mb-3 w-full">
                 <h3 className="mb-2 text-md text-[#444337]">
@@ -189,6 +215,14 @@ const SectionRSVP = ({ guest }) => {
                   <option value="3">3 Orang</option>
                 </select>
               </div>
+            )}
+            {!selectedValue && (
+              <button
+                className="py-3 px-7 w-full text-zinc-100 bg-[#9c8450]  hover:bg-[#867041] shadow-lg rounded shadow-black/20 hover:text-zinc-100   "
+                type="submit"
+              >
+                {loading ? <span>tunggu sebentar...</span> : <span>Kirim</span>}
+              </button>
             )}
 
             {selectedValue && (
