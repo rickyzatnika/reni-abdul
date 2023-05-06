@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
+import Backsound from "./Backsound";
 
 const Header = () => {
   return (
     <>
+      <Backsound />
       <div className="w-full min-h-screen overflow-hidden flex flex-col items-center justify-evenly relative">
         <div className="overflow-hidden">
           <img

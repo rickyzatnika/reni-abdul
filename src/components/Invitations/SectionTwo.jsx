@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -5,7 +6,7 @@ import { motion } from "framer-motion";
 const SectionTwo = () => {
   return (
     <>
-      <div className="w-full min-h-screen py-4 pb-10 lg:py-10 lg:h-full bg-gradient-to-t from-[#F0EABE] relative ">
+      <div className="w-full overflow-hidden min-h-screen pt-4 pb-14 lg:py-10 lg:h-full bg-gradient-to-t from-[#F0EABE] relative ">
         <div className="absolute -top-1 left-0 right-0 w-full z-10">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -89,13 +90,20 @@ const SectionTwo = () => {
           <p className="text-md text-[#444337] ">Pukul 11.00 - selesai</p>
         </motion.div>
         <motion.div
-          initial={{ y: 30, opacity: 0 }}
+          initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          transition={{ duration: 0.4 }}
           className="text-center px-2 flex gap-3 flex-col items-center justify-center leading-relaxed"
         >
           <span className="text-[#444337]">Lokasi :</span>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.7937113458006!2d107.65264697041897!3d-6.819928572310055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e196fcceadb9%3A0x77197aa15b96b809!2sVilla%20Bayu%20Lembang!5e0!3m2!1sid!2sid!4v1683386753617!5m2!1sid!2sid"
+            width="350"
+            height="320"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
           <p className="text-md font-semibold text-[#444337]">
             Villa Bayu Lembang <br />
             <span className="italic text-md">

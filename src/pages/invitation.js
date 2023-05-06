@@ -5,7 +5,7 @@ import useSWR from "swr";
 import Gift from '../components/Invitations/Gift';
 
 const Header = lazy(() => import("../components/Invitations/Headers"));
-const Backsound = lazy(() => import("../components/Invitations/Backsound"));
+
 const SectionOne = lazy(() => import("../components/Invitations/SectionOne"));
 const SectionTwo = lazy(() => import("../components/Invitations/SectionTwo"));
 const SectionThree = lazy(() => import("../components/Invitations/SectionThree"));
@@ -37,7 +37,7 @@ const Invitation = () => {
     <Suspense fallback={<div className="w-full min-h-screen flex items-center justify-center">
       <img src="/loader.svg" alt="" />
     </div>}>
-      <Backsound />
+
       <Header />
       <SectionOne />
       <SectionTwo />

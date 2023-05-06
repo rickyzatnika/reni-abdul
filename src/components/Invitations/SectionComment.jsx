@@ -39,11 +39,11 @@ const SectionComment = ({ guest }) => {
         .then(() => {
           setLoading(true);
           setTimeout(() => {
-            Swal.fire({
-              icon: "success",
-              text: "Pesan Terkirim, Terima Kasih.",
-              confirmButtonColor: "teal",
-            });
+            // Swal.fire({
+            //   icon: "success",
+            //   text: "Pesan Terkirim, Terima Kasih.",
+            //   confirmButtonColor: "teal",
+            // });
             reset();
             setLoading(false);
             window.location.reload();
@@ -112,7 +112,7 @@ const SectionComment = ({ guest }) => {
                 </span>
                 <p className="mb-2 p-2 text-sm leading-relaxed lg:text-md font-thin text-zinc-300 ">
                   Happy wedding Pidi & Fitri, semoga menjadi keluarga yang
-                  Sakinah, Mawadah & Warohmah.. Amiin .. 🤲
+                  Sakinah, Mawadah & Warohmah.. Amiin ..
                 </p>
                 <small className="text-zinc-500 p-2 ">
                   10 Juni 2023, 9:14 pm
