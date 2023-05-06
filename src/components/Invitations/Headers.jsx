@@ -11,9 +11,9 @@ const Header = () => {
             className="w-full h-full object-cover object-center absolute top-0 left-0 right-0 -z-50"
           />
         </div>
-        <div className="w-full min-h-screen absolute top-0 left-0 -z-40 bg-gradient-to-b from-black/40 to-black/60 mix-blend-overlay" />
-        <h1 className="text-[#272724] rounded-full p-1 px-3 bg-zinc-500/10 backdrop-blur w-fit text-center text-2xl">
-          Undangan Pernikahan
+        <div className="w-full min-h-screen absolute top-0 left-0 -z-40 bg-gradient-to-b from-black/50 to-black/60 mix-blend-overlay" />
+        <h1 className="text-[#a1873e] relative z-50 rounded-full bg-zinc-200/60 py-1 px-5  backdrop-blur w-fit text-center text-2xl">
+          The <span className="alex text-3xl tracking-widest">wedding</span> of
         </h1>
         <motion.div
           initial={{ scale: 4, opacity: 0 }}
