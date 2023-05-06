@@ -54,9 +54,7 @@ const SectionOne = () => {
                     Fidyan Lazuardi
                   </h3>
                   <div className="text-zinc-700 leading-relaxed">
-                    <p className="font-semibold">
-                      Putra Ke 6 dari 10 Bersaudara :
-                    </p>
+                    <p className="font-semibold">Putra dari :</p>
                     <p>Bpk Drs. Walid Syaikun</p> <span>&</span>{" "}
                     <p>Ibu Ade Nur Hasanah</p>
                   </div>
@@ -91,10 +89,8 @@ const SectionOne = () => {
                     Fitri Nurramadhanty
                   </h3>
                   <div className="text-zinc-700 leading-relaxed">
-                    <p className="font-semibold">
-                      Putra Ke 2 dari 5 Bersaudara :
-                    </p>
-                    <p>Bpk Nurpalah</p> <span>&</span> <p>Ibu Reni Anngraeni</p>
+                    <p className="font-semibold">Putri dari :</p>
+                    <p>Bpk Nurpalah</p> <span>&</span> <p>Ibu Reni Angraeni</p>
                   </div>
                   <Link to="https://instagram.com">
                     <IoLogoInstagram size={28} className="text-pink-800" />
