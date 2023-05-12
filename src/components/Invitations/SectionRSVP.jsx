@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
-import { motion } from "framer-motion";
 
 const SectionRSVP = ({ guest }) => {
   const { register, handleSubmit, reset } = useForm();
@@ -24,7 +23,7 @@ const SectionRSVP = ({ guest }) => {
   // Update Status
   const attendForm = async ({ status, present }) => {
     try {
-      const userId = guest.userId;
+      const userId = guest?.userId;
       await axios.patch(
         `${process.env.REACT_APP_URI}/invitation/status/${uuid}?userId=${userId}`,
         {
@@ -154,7 +153,7 @@ const SectionRSVP = ({ guest }) => {
         </div>
       )} */}
       <div className="m-0 p-0" ref={sectionRef}></div>
-      {guest && guest.status === "Opened" ? (
+      {guest && guest?.status === "Opened" ? (
         <>
           {showModal && (
             <div
