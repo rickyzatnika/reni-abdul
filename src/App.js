@@ -10,10 +10,6 @@ function App() {
       <Router>
         <AnimatedRoutes />
       </Router>
-
-
-
-
     </>
   );
 }

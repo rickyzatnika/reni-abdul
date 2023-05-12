@@ -5,7 +5,7 @@ import Home from "../pages/home";
 import { AnimatePresence } from "framer-motion";
 
 import React, { lazy, Suspense } from 'react';
-
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const GetId = lazy(() => import("./GetId"))
 
@@ -18,13 +18,16 @@ const AnimatedRoutes = () => {
             <AnimatePresence mode="wait">
 
                 <Routes key={location.pathname} location={location}>
-                    <Route path="/:uuid" element={<Suspense fallback={<div className="w-full min-h-screen flex items-center justify-center bg-white">
-                        <img src="loaders.svg" alt="" />
-                    </div>}>
-                        <GetId />
-                    </Suspense>} />
-                    <Route path="/" element={<Home />} />
-                    <Route path="/invitation/:uuid" element={<Invitation />} />
+                    <ParallaxProvider>
+
+                        <Route path="/:uuid" element={<Suspense fallback={<div className="w-full min-h-screen flex items-center justify-center bg-white">
+                            <img src="loaders.svg" alt="" />
+                        </div>}>
+                            <GetId />
+                        </Suspense>} />
+                        <Route path="/" element={<Home />} />
+                        <Route path="/invitation/:uuid" element={<Invitation />} />
+                    </ParallaxProvider>
                 </Routes>
             </AnimatePresence>
 
