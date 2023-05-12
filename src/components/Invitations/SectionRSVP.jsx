@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/role-has-required-aria-props */
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -10,10 +10,16 @@ const SectionRSVP = ({ guest }) => {
   const { register, handleSubmit, reset } = useForm();
   const [selectedValue, setSelectedValue] = useState("");
   const [loading, setLoading] = useState(false);
+  const { uuid } = useParams();
+
+  // Show Popup
+  const sectionRef = useRef(null);
+  const [showModal, setShowModal] = useState(false);
+  const [displayed, setDisplayed] = useState(false);
+
+  // Show Qr-Code
   // const [qrCode, setQrCode] = useState([]);
   // const [modal, setModal] = useState(false);
-
-  const { uuid } = useParams();
 
   // Update Status
   const attendForm = async ({ status, present }) => {
@@ -46,6 +52,7 @@ const SectionRSVP = ({ guest }) => {
             confirmButtonColor: "#bfa95b",
           });
           setLoading(false);
+          setShowModal(false);
           reset();
         }, 3000);
 
@@ -54,6 +61,7 @@ const SectionRSVP = ({ guest }) => {
         return () => clearTimeout(setTimeout);
       }
       reset();
+      setShowModal(false);
     } catch (error) {
       console.log(error);
     }
@@ -61,6 +69,23 @@ const SectionRSVP = ({ guest }) => {
   const handleClick = (value) => {
     setSelectedValue(value);
   };
+
+  // Show Pop up window 1x
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !displayed) {
+          setShowModal(true);
+          setDisplayed(true);
+        }
+      });
+    });
+    observer.observe(sectionRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [displayed, guest.status]);
 
   // Get QrCode
   // useEffect(() => {
@@ -128,114 +153,135 @@ const SectionRSVP = ({ guest }) => {
           </div>
         </div>
       )} */}
-      <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="h-full rounded-t-[35px] flex flex-col px-2 bg-zinc-100 shadow-xl shadow-[#727251]/60 mt-8 lg:mt-20 w-[90%] mx-auto overflow-hidden items-center lg:items-center py-10 lg:py-20 justify-center relative"
-      >
-        <div className="relative pt-4 lg:pt-14 w-full  mx-auto px-2">
-          <div className="relative w-full lg:w-5/6 mx-auto   pb-6">
-            <h3 className="text-2xl lg:text-3xl text-[#444337]">Konfirmasi</h3>{" "}
-            <span className="alex text-4xl text-[#bfa95b]">kehadiran</span>
-            <div className="w-24 h-[2px] absolute top-4 right-8 bg-[#bfa95b] " />
-          </div>
-          <form
-            onSubmit={handleSubmit(attendForm)}
-            className="w-full rounded z-50 h-auto px-2 lg:px-20 flex flex-col items-start justify-between gap-3"
-          >
-            <div className="w-full leading-relaxed mb-3 px-3">
-              <div className="flex flex-col flex-nowrap gap-2">
-                <div className="flex flex-nowrap gap-1">
-                  <input
-                    type="radio"
-                    value="going"
-                    {...register("status")}
-                    checked={selectedValue === "going"}
-                    onChange={() => handleClick("going")}
-                  />
-                  <label
-                    className="text-[#444337] text-lg lg:text-xl"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleClick("going");
-                    }}
-                  >
-                    Ya, saya akan hadir
-                  </label>
+      <div className="m-0 p-0" ref={sectionRef}></div>
+      {guest && guest.status === "Opened" ? (
+        <>
+          {showModal && (
+            <div
+              className={`transition-all duration-500 ease-linear rounded-t-[35px] flex flex-col px-2 bg-zinc-100 shadow-xl shadow-[#727251]/60  w-[90%] mx-auto overflow-hidden items-center lg:items-center py-10 lg:py-20 justify-center top-44 left-0 right-0 z-50 fixed ${
+                showModal
+                  ? " right-0 "
+                  : " -right-[100%] transition-all duration-500 ease-linear"
+              }`}
+            >
+              <div className="relative pt-4 lg:pt-14 w-full  mx-auto px-2">
+                <div className="relative w-full lg:w-5/6 mx-auto   pb-6">
+                  <h3 className="text-2xl lg:text-3xl text-[#444337]">
+                    Konfirmasi
+                  </h3>{" "}
+                  <span className="alex text-4xl text-[#bfa95b]">
+                    kehadiran
+                  </span>
+                  <div className="w-24 h-[2px] absolute top-4 right-8 bg-[#bfa95b] " />
                 </div>
-                <div className="flex flex-nowrap gap-1">
-                  <input
-                    type="radio"
-                    value="not Going"
-                    {...register("status")}
-                    checked={selectedValue === "not Going"}
-                    onChange={() => handleClick("not Going")}
-                  />
-                  <label
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleClick("not Going");
-                    }}
-                    className="text-[#444337] text-lg lg:text-xl"
-                  >
-                    Maaf, tidak bisa hadir
-                  </label>
-                </div>
+                <form
+                  onSubmit={handleSubmit(attendForm)}
+                  className="w-full rounded z-50 h-auto px-2 lg:px-20 flex flex-col items-start justify-between gap-3"
+                >
+                  <div className="w-full leading-relaxed mb-3 px-3">
+                    <div className="flex flex-col flex-nowrap gap-2">
+                      <div className="flex flex-nowrap gap-1">
+                        <input
+                          type="radio"
+                          value="going"
+                          {...register("status")}
+                          checked={selectedValue === "going"}
+                          onChange={() => handleClick("going")}
+                        />
+                        <label
+                          className="text-[#444337] text-lg lg:text-xl"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleClick("going");
+                          }}
+                        >
+                          Ya, saya akan hadir
+                        </label>
+                      </div>
+                      <div className="flex flex-nowrap gap-1">
+                        <input
+                          type="radio"
+                          value="not Going"
+                          {...register("status")}
+                          checked={selectedValue === "not Going"}
+                          onChange={() => handleClick("not Going")}
+                        />
+                        <label
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleClick("not Going");
+                          }}
+                          className="text-[#444337] text-lg lg:text-xl"
+                        >
+                          Maaf, tidak bisa hadir
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  {!selectedValue && (
+                    <div className="mb-3 w-full">
+                      <h3 className="mb-2 text-md text-[#444337]">
+                        Berapa orang yang akan hadir :
+                      </h3>
+                      <select
+                        className="w-full text-[#444337] py-3 px-2 border-none outline-none rounded focus:outline-[#9c8450]"
+                        {...register("present", { required: true })}
+                      >
+                        <option value="1">1 Orang</option>
+                        <option value="2">2 Orang</option>
+                        <option value="3">3 Orang</option>
+                      </select>
+                    </div>
+                  )}
+
+                  {selectedValue === "going" && (
+                    <div className="mb-3 w-full">
+                      <h3 className="mb-2 text-md text-[#444337]">
+                        Berapa orang yang akan hadir :
+                      </h3>
+                      <select
+                        className="w-full text-[#444337] py-3 px-2 border-none outline-none rounded focus:outline-[#9c8450]"
+                        {...register("present", { required: true })}
+                      >
+                        <option value="1">1 Orang</option>
+                        <option value="2">2 Orang</option>
+                        <option value="3">3 Orang</option>
+                      </select>
+                    </div>
+                  )}
+                  {!selectedValue && (
+                    <button
+                      className="py-3 px-7 w-full text-zinc-100 bg-[#9c8450]  hover:bg-[#867041] shadow-lg rounded shadow-black/20 hover:text-zinc-100   "
+                      type="submit"
+                    >
+                      {loading ? (
+                        <span>tunggu sebentar...</span>
+                      ) : (
+                        <span>Kirim</span>
+                      )}
+                    </button>
+                  )}
+
+                  {selectedValue && (
+                    <button
+                      className="py-3 px-7 w-full text-zinc-100 bg-[#9c8450]  hover:bg-[#867041] shadow-lg rounded shadow-black/20 hover:text-zinc-100   "
+                      type="submit"
+                    >
+                      {loading ? (
+                        <span>tunggu sebentar...</span>
+                      ) : (
+                        <span>Kirim</span>
+                      )}
+                    </button>
+                  )}
+                </form>
               </div>
             </div>
-            {!selectedValue && (
-              <div className="mb-3 w-full">
-                <h3 className="mb-2 text-md text-[#444337]">
-                  Berapa orang yang akan hadir :
-                </h3>
-                <select
-                  className="w-full text-[#444337] py-3 px-2 border-none outline-none rounded focus:outline-[#9c8450]"
-                  {...register("present", { required: true })}
-                >
-                  <option value="1">1 Orang</option>
-                  <option value="2">2 Orang</option>
-                  <option value="3">3 Orang</option>
-                </select>
-              </div>
-            )}
-
-            {selectedValue === "going" && (
-              <div className="mb-3 w-full">
-                <h3 className="mb-2 text-md text-[#444337]">
-                  Berapa orang yang akan hadir :
-                </h3>
-                <select
-                  className="w-full text-[#444337] py-3 px-2 border-none outline-none rounded focus:outline-[#9c8450]"
-                  {...register("present", { required: true })}
-                >
-                  <option value="1">1 Orang</option>
-                  <option value="2">2 Orang</option>
-                  <option value="3">3 Orang</option>
-                </select>
-              </div>
-            )}
-            {!selectedValue && (
-              <button
-                className="py-3 px-7 w-full text-zinc-100 bg-[#9c8450]  hover:bg-[#867041] shadow-lg rounded shadow-black/20 hover:text-zinc-100   "
-                type="submit"
-              >
-                {loading ? <span>tunggu sebentar...</span> : <span>Kirim</span>}
-              </button>
-            )}
-
-            {selectedValue && (
-              <button
-                className="py-3 px-7 w-full text-zinc-100 bg-[#9c8450]  hover:bg-[#867041] shadow-lg rounded shadow-black/20 hover:text-zinc-100   "
-                type="submit"
-              >
-                {loading ? <span>tunggu sebentar...</span> : <span>Kirim</span>}
-              </button>
-            )}
-          </form>
-        </div>
-      </motion.div>
+          )}
+        </>
+      ) : (
+        <div className="hidden"></div>
+      )}
     </>
   );
 };

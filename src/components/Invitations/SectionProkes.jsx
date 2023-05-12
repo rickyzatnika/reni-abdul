@@ -1,30 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Prokes1 from "../../assets/images/prokes_1.png";
+import Prokes2 from "../../assets/images/prokes_2.png";
+import Prokes3 from "../../assets/images/prokes_3.png";
+import Prokes4 from "../../assets/images/prokes_4.png";
 
 const SectionProkes = () => {
-  const images = [
-    {
-      id: 1,
-      src: "/prokes-1.png",
-    },
-    {
-      id: 2,
-      src: "/prokes-2.png",
-    },
-    {
-      id: 3,
-      src: "/prokes-3.png",
-    },
-    {
-      id: 4,
-      src: "/prokes-4.png",
-    },
-    {
-      id: 5,
-      src: "/prokes-5.png",
-    },
-  ];
-
   return (
     <div className="relative overflow-hidden bg-[#DAD8C0] shadow-xl  shadow-[#9c8450]/40 w-full  h-full flex flex-col items-center justify-center py-12">
       <div className="flex md:w-4/6 mx-auto items-center justify-between  px-4 w-full  py-6  ">
@@ -55,20 +36,48 @@ const SectionProkes = () => {
         Tanpa mengurangi rasa hormat, acara ini menerapkan Protokol Kesehatan,
         sesuai dengan peraturan & rekomendasi pemerintah.
       </motion.p>
-      <div className=" grid grid-cols-2 lg:grid-cols-3 p-12 gap-2 items-center justify-center">
-        {images.map((image) => (
-          <div key={image.id} className=" w-full h-full col-span-1 ">
-            <motion.img
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9, delay: 0.2 }}
-              src={image.src}
-              alt=""
-              className="w-[120px] lg:w-[150px] object-cover"
-            />
-          </div>
-        ))}
+      <div className="w-full lg:w-[50%] h-full mt-8">
+        <div className="grid grid-cols-4 p-2 gap-2 items-center justify-center ">
+          <motion.img
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            src={Prokes1}
+            alt=""
+            className="w-[120px] lg:w-[150px] object-cover mx-auto"
+          />
+
+          <motion.img
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            src={Prokes2}
+            alt=""
+            className="w-[120px] lg:w-[150px] object-cover mx-auto"
+          />
+
+          <motion.img
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            src={Prokes3}
+            alt=""
+            className="w-[120px] lg:w-[150px] object-cover mx-auto"
+          />
+
+          <motion.img
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            src={Prokes4}
+            alt=""
+            className="w-[120px] lg:w-[150px] object-cover mx-auto"
+          />
+        </div>
       </div>
     </div>
   );

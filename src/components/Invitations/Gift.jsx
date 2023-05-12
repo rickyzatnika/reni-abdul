@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { AiOutlineCopy } from "react-icons/ai";
 import { MdOutlineWhatsapp } from "react-icons/md";
-import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
+import BCA from "../../assets/images/bca.png";
 
 const Gift = () => {
   const [copyText, setCopyText] = useState(true);
@@ -31,8 +31,8 @@ const Gift = () => {
   };
 
   return (
-    <>
-      <div className="py-10 w-[96%] mx-auto rounded-[50px] h-full lg:w-5/6 px-4 lg:px-12 shadow-xl bg-zinc-100 my-10 shadow-[#9c8450]/40 flex flex-col items-center justify-center">
+    <div className="w-full h-full bg-white py-10 ">
+      <div className=" w-[96%] mx-auto py-8 rounded-[50px] h-full lg:w-5/6 px-4 lg:px-12 shadow-xl bg-zinc-100 my-10 shadow-[#9c8450]/40 flex flex-col items-center justify-center">
         <div className="flex flex-col gap-3 items-center justify-center">
           <motion.h3
             initial={{ y: -40, opacity: 0 }}
@@ -62,7 +62,7 @@ const Gift = () => {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              src="/images/bca.png"
+              src={BCA}
               alt=""
               className="w-3/6 lg:4/6 mx-auto"
             />
@@ -119,7 +119,7 @@ const Gift = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

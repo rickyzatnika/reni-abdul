@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import moment from "moment/moment";
 import useSWR from "swr";
 import { FcOk } from "react-icons/fc";
+import { FaUserCircle } from "react-icons/fa";
 
 const SectionComment = ({ guest }) => {
   const { register, handleSubmit, reset } = useForm();
@@ -61,7 +62,7 @@ const SectionComment = ({ guest }) => {
   };
 
   return (
-    <div className="w-full px-2 h-full pt-10">
+    <div className="w-full bg-white px-2 h-full pt-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 px-2 lg:px-20 gap-0 lg:gap-4 ">
         <div className="col-span-1 lg:col-span-4 bg-zinc-100 h-fit shadow-xl shadow-[#9c8450]/40 relative lg:sticky top-0">
           <div className="py-8 text-center">
@@ -97,15 +98,15 @@ const SectionComment = ({ guest }) => {
             </button>
           </form>
         </div>
-        <div className="col-span-1 lg:col-span-8">
-          <div className="w-full py-10 relative bg-[#191919] pl-3 lg:px-10 ">
+        <div className="col-span-1 lg:col-span-8 ">
+          <div className="w-full py-10 relative overflow-y-scroll h-[85%] bg-[#191919] pl-3 lg:px-10 ">
             <h2 className="text-zinc-100">
               {posts?.length + 1} <span className="italic">Post Comment</span>
             </h2>
-            <ol className="border-l-2  border-[#6e664b] p-8   ">
+            <ol className=" border-[#6e664b] p-8   ">
               <li className="w-full border-b pb-4 border-zinc-700">
-                <div className="absolute w-3 h-3 left-1 lg:left-8 ">
-                  <FcOk size={20} />
+                <div className="absolute w-3 h-3 left-3 lg:left-8 ">
+                  <FaUserCircle className="text-[#97864f]" size={24} />
                 </div>
                 <span className="mb-1 text-lg lg:text-xl font-normal leading-none text-zinc-700 dark:text-zinc-100">
                   WebHouse Invitation
@@ -121,10 +122,10 @@ const SectionComment = ({ guest }) => {
             </ol>
 
             {posts?.map((post, i) => (
-              <ol key={i} className="border-l-2  border-[#6e664b] p-8  ">
+              <ol key={i} className="border-[#6e664b] p-8  ">
                 <li className="w-full border-b pb-4 border-zinc-700">
-                  <div className="absolute w-3 h-3 left-1 lg:left-8  ">
-                    <FcOk size={20} />
+                  <div className="absolute w-3 h-3 left-3 lg:left-8 ">
+                    <FaUserCircle className="text-[#97864f]" size={24} />
                   </div>
                   <span className="mb-1 capitalize text-lg lg:text-xl font-sans  text-zinc-300 ">
                     {post?.name}

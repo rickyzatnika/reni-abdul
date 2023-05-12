@@ -2,6 +2,9 @@ import React from "react";
 import { IoLogoInstagram } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Man from "../../assets/images/man.png";
+import Girls from "../../assets/images/girl.png";
+import Bismillah from "../../assets/images/bismilah.png";
 
 const SectionOne = () => {
   return (
@@ -14,7 +17,7 @@ const SectionOne = () => {
               whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              src="/images/bismilah.png"
+              src={Bismillah}
               alt=""
               className="w-3/6 mx-auto mb-3 sm:w-1/6 object-contain"
             />
@@ -39,7 +42,7 @@ const SectionOne = () => {
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  src="/images/man.png"
+                  src={Man}
                   alt=""
                   className=" w-4/6 lg:w-[250px] mb-3 rounded-[80px] shadow-black/70 shadow-xl mx-auto object-cover"
                 />
@@ -74,7 +77,7 @@ const SectionOne = () => {
                   whileInView={{ x: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.3 }}
-                  src="/images/girl.png"
+                  src={Girls}
                   alt=""
                   className=" w-4/6 lg:w-[250px] mb-3 shadow-black/70 shadow-xl rounded-[80px] mx-auto object-cover"
                 />

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const SectionTwo = () => {
   return (
     <>
-      <div className="w-full overflow-hidden min-h-screen pt-4 pb-14 lg:py-10 lg:h-full bg-gradient-to-t from-[#F0EABE] relative ">
+      <div className="w-full  min-h-screen pt-4 pb-14 lg:py-10 lg:h-full bg-gradient-to-b from-[#F0EABE] to-[#F0EABE]/50 relative ">
         <div className="absolute -top-1 left-0 right-0 w-full z-10">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -102,7 +102,7 @@ const SectionTwo = () => {
             width="350"
             height="320"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
           <p className="text-md font-semibold text-[#444337]">
             Villa Bayu Lembang <br />

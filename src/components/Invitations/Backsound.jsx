@@ -15,12 +15,11 @@ const BackSound = () => {
   }, [isPlay]);
 
   const togglePlay = () => {
-    console.log("togglePlay", isPlay);
     setIsPlay(!isPlay);
   };
 
   return (
-    <div className="fixed  z-[99] top-4 left-4">
+    <div className="fixed z-[99] top-4 left-4">
       <button
         onClick={togglePlay}
         className="cursor-pointer rounded-full backdrop-blur w-fit shadow-lg shadow-white/40 transition-all duration-700 delay-75 ease-linear p-2 bg-gradient-to-tr from-[#9c8450] via-[#665531] to-[#9c8450]"
