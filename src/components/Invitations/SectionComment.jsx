@@ -40,11 +40,11 @@ const SectionComment = ({ guest }) => {
         .then(() => {
           setLoading(true);
           setTimeout(() => {
-            // Swal.fire({
-            //   icon: "success",
-            //   text: "Pesan Terkirim, Terima Kasih.",
-            //   confirmButtonColor: "teal",
-            // });
+            Swal.fire({
+              icon: "success",
+              text: "Pesan Terkirim, Terima Kasih.",
+              confirmButtonColor: "teal",
+            });
             reset();
             setLoading(false);
             window.location.reload();

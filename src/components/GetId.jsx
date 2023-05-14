@@ -24,6 +24,8 @@ const GetId = () => {
 
   useEffect(() => {}, [guest]);
 
+  console.log(guest);
+
   const formSubmit = async () => {
     try {
       const userId = guest?.userId;

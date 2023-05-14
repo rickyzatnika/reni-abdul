@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const SectionTwo = () => {
   return (
     <>
-      <div className="w-full  min-h-screen pt-4 pb-14 lg:py-10 lg:h-full bg-gradient-to-b from-[#F0EABE] to-[#F0EABE]/50 relative ">
+      <div className="w-full  min-h-screen pt-4 pb-14 lg:py-10 lg:h-full bg-gradient-to-b from-[#F0EABE] via-[#F0EABE]/70 to-[#F0EABE] relative ">
         <div className="absolute -top-1 left-0 right-0 w-full z-10">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -49,7 +49,7 @@ const SectionTwo = () => {
           Bapak/Ibu/Saudara/i sekalian guna hadir didalam acara pernikahan kami
           yang akan diselenggarakan pada :
         </motion.p>
-        <div className="w-full h-full pt-2 lg:pt-20 flex flex-col items-center justify-evenly">
+        <div className="w-full h-full pt-2 lg:pt-20 flex flex-col  items-center justify-evenly">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -57,7 +57,7 @@ const SectionTwo = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="w-full  py-4 flex flex-col text-center items-center justify-center gap-5 lg:justify-around pt-8"
           >
-            <div className="w-full flex gap-4 flex-col items-center justify-center">
+            <div className="w-fit p-6 border-b-0 rounded-3xl border flex gap-4 flex-col items-center justify-center">
               <h3 className="text-3xl text-[#444337] ">
                 Akad <span className="alex text-4xl">Nikah</span>
               </h3>
@@ -77,7 +77,7 @@ const SectionTwo = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-col gap-4 items-center justify-center py-12"
+          className="w-fit p-6 border-t-0 rounded-3xl border mx-auto flex flex-col gap-4 mb-6 items-center justify-center "
         >
           <h3 className="text-3xl text-[#444337]">Resepsi :</h3>
           <div className="flex text-[#727251] text-xl items-center  gap-4">
@@ -96,7 +96,7 @@ const SectionTwo = () => {
           transition={{ duration: 0.4 }}
           className="text-center px-2 flex gap-3 flex-col items-center justify-center leading-relaxed"
         >
-          <span className="text-[#444337]">Lokasi :</span>
+          <span className="text-[#444337] text-lg">Lokasi :</span>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.7937113458006!2d107.65264697041897!3d-6.819928572310055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e196fcceadb9%3A0x77197aa15b96b809!2sVilla%20Bayu%20Lembang!5e0!3m2!1sid!2sid!4v1683386753617!5m2!1sid!2sid"
             width="350"
