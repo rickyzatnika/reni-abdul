@@ -24,8 +24,6 @@ const GetId = () => {
 
   useEffect(() => {}, [guest]);
 
-  console.log(guest);
-
   const formSubmit = async () => {
     try {
       const userId = guest?.userId;
@@ -108,7 +106,7 @@ const GetId = () => {
                   Maaf sepertinya anda tidak diundang
                 </div>
               )}
-
+              {/* fixed status opened*/}
               {!guest?.status ? (
                 <>
                   <button

@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
-import Backsound from "./Backsound";
 import Bg_Header from "../../assets/images/header.png";
 import { Parallax } from "react-scroll-parallax";
 
 const Header = () => {
   return (
     <>
-      <Backsound />
-
       <motion.div
         initial={{ scale: 1.3, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
