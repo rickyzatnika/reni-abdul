@@ -1,5 +1,4 @@
 import React from 'react'
-import BackSound from '../components/Invitations/Backsound'
 import Header from '../components/Invitations/Headers'
 import SectionOne from '../components/Invitations/SectionOne'
 import SectionTwo from '../components/Invitations/SectionTwo'
@@ -14,7 +13,7 @@ import Footer from '../components/Invitations/Footer'
 const Home = () => {
     return (
         <>
-            <BackSound />
+
             <Header />
             <SectionOne />
             <SectionTwo />
